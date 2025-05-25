@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Design Portfolio Website </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="josefin-sans-main" id="body">
+
+  <div class="full-image-wrap" id="fullImageWrap">
+    <div class="gallery-arrow-left-full" id="galleryArrowLeftFull" onclick="backwardArrow()">
+      <button type="button" id="leftButton"> &#x2B98; </button>
+    </div>
+    <div class="full-image-box" id="fullImageBox">
+      <div class="para-box-side solid-black">
+        <div class="para-box-top">
+          <div class="para-box-top no-outline no-margin">
+            <p id="imageTitle" class="image-text-title-full"> </p>
+          </div>
+          <div class="para-box-top no-outline no-margin">
+            <p id="imageDate" class="image-text-date-full"> </p>
+          </div>
+        </div>
+        <div class="para-box-top">
+          <img id="fullImage" src="">
+        </div>
+        <!-- <div class="para-box-top">
+          <p> <span class="bigger-p">Highlights</span> <br>Check out these projects that deserve their own spot!</p>
+        </div> -->
+      </div>
+      <span class="close" onclick="closeFullImage()">Close</span>
+    </div>
+    <div class="gallery-arrow-right-full" id="galleryArrowRightFull" onclick="forwardArrow()">
+      <button type="button" id="rightButton"> &#x2B9A; </button>
+    </div>
+  </div>
+
+  <header>
+    <nav class="nav-links works-links" id="navLinks">
+      <ul>
+        <!-- <img class="logo" src="background-img-trans2.png" alt=""> -->
+        <li><a href="index.html">About</a></li>
+        <li class="active"><a href="works.html">Works</a></li>
+        <li class="section-links"><a href="#camera-work"> Camera Work </a></li>
+        <li class="section-links"><a href="#3d-graphics"> 3D Graphics </a></li>
+        <li class="section-links"><a href="#2d-graphics"> 2D Graphics </a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-box" id="contentBox">
+    <div class="para-box-side hBox">
+      <div class="para-box-top no-outline hBoxLeft">
+        <h1>WORKS</h1>
+        <h2>A Series of Digital Design Works</h2>
+      </div>
+    </div>
+
+    <!-- Camera Work (Photography) Section -->
+
+    <div class="para-box-side">
+      <div class="para-box-side no-outline">
+        <div class="para-box-top no-margin no-outline">
+          <p> <span class="bigger-p">Highlights</span> <br>Check out these projects that deserve their own spot!</p>
+          <div class="para-box-side no-outline no-margin"><a href="works.html">
+              <button type="button" id="worksButton">See More!</button> </a> </div>
+        </div>
+
+        <div class="image-box" id="imageBox">
+
+          <div class="image-cover" id="0" onclick="openFullImage(this)">
+            <img class="image" src="./Images/Camera ClipArt.png" alt="">
+            <div class="image-text-title-small">
+              <p class="imageTitleText">Camera</p>
+            </div>
+            <div class="image-text-date-small">
+              <p class="imageDateText"> 10-2024 </p>
+            </div>
+          </div>
+
+          <div class="image-cover" id="1" onclick="openFullImage(this)">
+            <img class="image" src="./Images/hungryRender.jpg" alt="">
+            <div class="image-text-title-small">
+              <p class="imageTitleText">Camera</p>
+            </div>
+            <div class="image-text-date-small">
+              <p class="imageDateText"> 10-2024 </p>
+            </div>
+          </div>
+
+          <div class="image-cover" id="2" onclick="openFullImage(this)">
+            <img class="image" src="./Images/Mercedes AMG.png" alt="">
+            <div class="image-text-title-small">
+              <p class="imageTitleText">Camera</p>
+            </div>
+            <div class="image-text-date-small">
+              <p class="imageDateText"> 10-2024 </p>
+            </div>
+          </div>
+
+          <div class="image-cover" id="3" onclick="openFullImage(this)">
+            <img class="image" src="./Compressed Images/Abandoned Alpha Compressed/Abandoned-Alpha-09-min.jpg" alt="">
+            <div class="image-text-title-small">
+              <p class="imageTitleText">Camera</p>
+            </div>
+            <div class="image-text-date-small">
+              <p class="imageDateText"> 10-2024 </p>
+            </div>
+          </div>
+
+          <div class="image-cover" id="4" onclick="openFullImage(this)">
+            <img class="image" src="./Compressed Images/Teapot Render.jpg" alt="">
+            <div class="image-text-title-small">
+              <p class="imageTitleText">Camera</p>
+            </div>
+            <div class="image-text-date-small">
+              <p class="imageDateText"> 10-2024 </p>
+            </div>
+          </div>
+
+          <div class="image-cover" id="5" onclick="openFullImage(this)">
+            <img class="image" src="./Images/Logo Clipart.png" alt="">
+            <div class="image-text-title-small">
+              <p class="imageTitleText">Camera</p>
+            </div>
+            <div class="image-text-date-small">
+              <p class="imageDateText"> 10-2024 </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="para-box-side">
+      <div class="para-box-side no-outline">
+        <div class="para-box-top no-margin no-outline">
+          <p> <span class="bigger-p">Highlights</span> <br>Check out these projects that deserve their own spot!</p>
+          <div class="para-box-side no-outline no-margin"><a href="works.html">
+              <button type="button" id="worksButton">See More!</button> </a> </div>
+        </div>
+
+        <div class="image-box" id="imageBox">
+
+          <div class="image-cover" id="0" onclick="openFullImage(this)">
+            <img class="image" src="./Images/Camera ClipArt.png" alt="">
+            <div class="image-text-title-small">
+              <p class="imageTitleText">Camera</p>
+            </div>
+            <div class="image-text-date-small">
+              <p class="imageDateText"> 10-2024 </p>
+            </div>
+          </div>
+
+          <div class="image-cover" id="1" onclick="openFullImage(this)">
+            <img class="image" src="./Images/hungryRender.jpg" alt="">
+            <div class="image-text-title-small">
+              <p class="imageTitleText">Camera</p>
+            </div>
+            <div class="image-text-date-small">
+              <p class="imageDateText"> 10-2024 </p>
+            </div>
+          </div>
+
+          <div class="image-cover" id="2" onclick="openFullImage(this)">
+            <img class="image" src="./Images/Mercedes AMG.png" alt="">
+            <div class="image-text-title-small">
+              <p class="imageTitleText">Camera</p>
+            </div>
+            <div class="image-text-date-small">
+              <p class="imageDateText"> 10-2024 </p>
+            </div>
+          </div>
+
+          <div class="image-cover" id="3" onclick="openFullImage(this)">
+            <img class="image" src="./Compressed Images/Abandoned Alpha Compressed/Abandoned-Alpha-09-min.jpg" alt="">
+            <div class="image-text-title-small">
+              <p class="imageTitleText">Camera</p>
+            </div>
+            <div class="image-text-date-small">
+              <p class="imageDateText"> 10-2024 </p>
+            </div>
+          </div>
+
+          <div class="image-cover" id="4" onclick="openFullImage(this)">
+            <img class="image" src="./Compressed Images/Cats of Turkey-02-min.jpg" alt="">
+            <div class="image-text-title-small">
+              <p class="imageTitleText">Camera</p>
+            </div>
+            <div class="image-text-date-small">
+              <p class="imageDateText"> 10-2024 </p>
+            </div>
+          </div>
+
+          <div class="image-cover" id="5" onclick="openFullImage(this)">
+            <img class="image" src="./Compressed Images/Deer in Woods-06-min.jpg" alt="">
+            <div class="image-text-title-small">
+              <p class="imageTitleText">Camera</p>
+            </div>
+            <div class="image-text-date-small">
+              <p class="imageDateText"> 10-2024 </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="para-box-top" id="3d-graphics">
+      <p> <span class="bigger-p"> 3D Graphics </span> </p>
+
+
+      <div class="image-box">
+        <div class="left-column">
+          <div class="image-cover">
+            <img src="./Compressed Images/Money Hungry-min.jpg" alt="" onclick="openFullImage(this.src)">
+            <div class="image-text-title">
+              <p>MONEY HUNGRY</p>
+            </div>
+            <div class="image-text-date">
+              <p>07-2024</p>
+            </div>
+          </div>
+
+
+          <div class="image-cover">
+            <img src="./Compressed Images/Cologne Bottle Render-min.jpg" alt="" onclick="openFullImage(this.src)">
+            <div class="image-text-title">
+              <p>3D COLOGNE BOTTLE RENDER</p>
+            </div>
+            <div class="image-text-date">
+              <p> 10-2024 </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="right-column">
+          <div class="image-cover">
+            <img src="./Compressed Images/Teapot Render.jpg" alt="" onclick="openFullImage(this.src)">
+            <div class="image-text-title">
+              <p>A GOLDEN TEAPOT</p>
+            </div>
+            <div class="image-text-date">
+              <p>10-2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="para-box-top" id="2d-graphics">
+      <p> <span class="bigger-p"> 2D Graphics </span> </p>
+      <div class="image-box">
+        <div class="left-column">
+          <div class="image-cover">
+            <img src="./Images/Mercedes AMG.png" alt="" onclick="openFullImage(this.src)">
+            <div class="image-text-title">
+              <p>MERCEDES AMG</p>
+            </div>
+            <div class="image-text-date">
+              <p>09-2024</p>
+            </div>
+          </div>
+
+
+          <div class="image-cover">
+            <img src="./Images/Posters ClipArt.png" alt="" onclick="openFullImage(this.src)">
+            <div class="image-text-title">
+              <p>STACK OF PAPERS CLIPART</p>
+            </div>
+            <div class="image-text-date">
+              <p> 10-2024 </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="right-column">
+          <div class="image-cover">
+            <img src="./Images/Video Vision Logo Img.png" alt="" onclick="openFullImage(this.src)">
+            <div class="image-text-title">
+              <p>LOGO DESIGN</p>
+            </div>
+            <div class="image-text-date">
+              <p>05-2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  </main>
+
+  <footer>
+  </footer>
+
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>

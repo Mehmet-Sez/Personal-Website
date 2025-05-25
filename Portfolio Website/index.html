@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend+Zetta:wght@100..900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Design Portfolio Website </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="lexend-zetta-main" id="body">
+
+
+  <div class="full-image-wrap" id="fullImageWrap">
+    <div class="gallery-arrow-left-full" id="galleryArrowLeftFull" onclick="backwardArrow()">
+      <button type="button" id="leftButton"> &#x2B98; </button>
+    </div>
+    <div class="full-image-box" id="fullImageBox">
+      <div class="para-box-side solid-black">
+        <div class="para-box-top">
+          <div class="para-box-top no-outline no-margin">
+            <p id="imageTitle" class="image-text-title-full"> </p>
+          </div>
+          <div class="para-box-top no-outline no-margin">
+            <p id="imageDate" class="image-text-date-full"> </p>
+          </div>
+        </div>
+        <div class="para-box-top">
+          <img id="fullImage" src="">
+        </div>
+      </div>
+      <span class="close" onclick="closeFullImage()">Close</span>
+    </div>
+    <div class="gallery-arrow-right-full" id="galleryArrowRightFull" onclick="forwardArrow()">
+      <button type="button" id="rightButton"> &#x2B9A; </button>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-box">
+      <h1>MEHMET S.</h1>
+    </div>
+
+    <div class="header-box">
+      <h2>MULTIMEDIA DESIGNER</h2>
+    </div>
+
+    <div class="contact-box">
+      <button type="button" class="NavSocialButtons" onclick=" window.open('https://www.instagram.com/_mehmetsez_/','_blank')">
+        <img src="./icons8-instagram-192.png" alt="">
+      <button type="button" class="NavSocialButtons" onclick=" window.open('https://www.youtube.com/@Mehmet_Sez','_blank')">
+        <img src="./icons8-youtube-150 (1).png" alt="">
+      </button>
+      <button type="button" class="NavSocialButtons" onclick=" window.open('https://www.linkedin.com/in/mehmetsdesigns/','_blank')">
+        <img src="./icons8-linkedin-384.png" alt="">
+      </button>
+      </a>
+    </div>
+  </header>
+
+
+  <main class="content-box" id="contentBox">
+    <div class="header-image-box" id="headerImageBox">
+      <div class="header-arrow-left" id="headerImageBack" onclick="backwardArrow()">
+        <button type="button" id="headerLeftButton"> &#x2B98; </button>
+      </div>
+      <div class="header-image-cover">
+        <img class="image" src="./Images/Mercedes AMG.png" alt="">
+      </div>
+      <div class="header-arrow-right" id="headerImageForward" onclick="forwardArrow()">
+        <button type="button" id="headerRightButton"> &#x2B9A; </button>
+      </div>
+    </div>
+
+    <div class="section-bar">
+      <p><button class="section-button active" id="photographySectionButton"
+          onclick="openPhotographySection()">Photography</button></p>
+      <p><button class="section-button" id="filmSectionButton" onclick="openFilmSection()">Film</button></p>
+      <p><button class="section-button" id="digitalSectionButton" onclick="openDigitalSection()">Digital</button></p>
+      <p><button class="section-button" id="aboutSectionButton" onclick="openAboutSection()">About</button></p>
+      <p><button class="section-button" id="contactsSectionButton" onclick="openContactsSection()">Contacts</button></p>
+    </div>
+
+    <!--Photography Section DIV-->
+    <div class="photography-section" id="photographySection">
+
+      <!-- EVENTS -->
+      <div class="section-background">
+        <div class="section-column-box">
+          <div class="category-box">
+            <h1>EVENTS</h1>
+            <hr class="category-line">
+            <p>BAPTISMS</p>
+            <p>BABY SHOWERS</p>
+            <p>GRADUATION PARTIES</p>
+            <p>COMMUNITY ACTIVITIES</p>
+          </div>
+          <div class="section-divider">
+          </div>
+        </div>
+
+        <div class="section-box">
+          <div class="image-box image-grid" id="imageBox">
+
+            <div class="image-cover" id="0" onclick="openFullImage(this)">
+              <img class="image" src="./Images/Camera ClipArt.png" alt="">
+              <div class="image-text-title-small">
+                <p class="imageTitleText">Camera</p>
+              </div>
+              <div class="image-text-date-small">
+                <p class="imageDateText"> 10-2024 </p>
+              </div>
+            </div>
+
+            <div class="image-cover" id="1" onclick="openFullImage(this)">
+              <img class="image" src="./Images/hungryRender.jpg" alt="">
+              <div class="image-text-title-small">
+                <p class="imageTitleText">Camera</p>
+              </div>
+              <div class="image-text-date-small">
+                <p class="imageDateText"> 10-2024 </p>
+              </div>
+            </div>
+
+            <div class="image-cover" id="2" onclick="openFullImage(this)">
+              <img class="image" src="./Images/Mercedes AMG.png" alt="">
+              <div class="image-text-title-small">
+                <p class="imageTitleText">Camera</p>
+              </div>
+              <div class="image-text-date-small">
+                <p class="imageDateText"> 10-2024 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PORTAITS -->
+      <div class="section-background">
+        <div class="section-column-box">
+          <div class="category-box">
+            <h1>PORTRAITS</h1>
+            <hr class="category-line">
+            <p>PROFESSIONAL</p>
+            <p>BUSINESS</p>
+            <p>EXPRESSIVE</p>
+          </div>
+          <div class="section-divider">
+          </div>
+        </div>
+      </div>
+
+      <div class="section-background">
+        <div class="section-column-box">
+          <div class="category-box">
+            <h1>CREATIVE</h1>
+            <hr class="category-line">
+            <p>LONG EXPOSURE</p>
+            <p></p>
+            <p></p>
+          </div>
+          <div class="section-divider">
+          </div>
+        </div>
+
+        <div class="section-box">
+        </div>
+      </div>
+    </div>
+
+    <!--Film Section DIV-->
+    <div class="film-section" id="filmSection">
+      <div class="section-background">
+        <div class="section-column-box">
+          <div class="category-box">
+            <h1>LET THE<br>WATER RUN</h1>
+            <hr class="category-line">
+            <p>SHORT THRILLER FILM</p>
+          </div>
+          <div class="section-divider">
+          </div>
+        </div>
+
+        <div class="section-box">
+          <p>yue</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Digital Section DIV-->
+    <div class="digital-section" id="digitalSection">
+      <div class="section-background">
+        <div class="section-column-box">
+          <div class="category-box">
+            <h1>EVENTS</h1>
+            <hr class="category-line">
+            <p>BAPTISMS</p>
+            <p>BABY SHOWERS</p>
+            <p>GRADUATION PARTIES</p>
+            <p>COMMUNITY ACTIVITIES</p>
+          </div>
+          <div class="section-divider">
+          </div>
+        </div>
+
+        <div class="section-box">
+          <p>yue</p>
+        </div>
+      </div>
+    </div>
+
+    <!--About Section DIV-->
+    <div class="about-section" id="aboutSection">
+      <!-- BIOGRAPHY -->
+      <div class="section-background">
+        <div class="section-column-box">
+          <div class="category-box">
+            <h1>ARTIST<br>BIOGRAPHY</h1>
+            <hr class="category-line">
+            <!-- <p>An insight into my personal processes that I use for design.</p> -->
+          </div>
+          <div class="section-divider">
+            <div class="category-image">
+              <img src="Compressed Images/Headshot Profile-min.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="section-box">
+          <p>Hi! I am Mehmet Sezer, a multimedia designer. Cinematic photography, film production, graphic illustration,
+            UI/UX and other deliverables are what I specialize in.</p>
+        </div>
+      </div>
+
+      <!-- PHILOSOPHY -->
+      <div class="section-background">
+        <div class="section-column-box">
+          <div class="category-box">
+            <h1>PHILOSOPHY<br>OF CREATION</h1>
+            <hr class="category-line">
+            <!-- <p>An insight into my personal processes that I use for design.</p> -->
+          </div>
+          <div class="section-divider">
+          </div>
+        </div>
+
+        <div class="section-box">
+          <p>Real world happenings serve as an influence for every creative endeavor. Film, photo, paint, and other
+            forms of artistic media all embody a sense of realism, as nothing is truly created through the mind alone.
+            Sensory inputs that one feels are articulated and combined to generate the masterpieces we see on a daily
+            basis. No one can create a new color that doesn’t already exist. We simply blend the colors together to
+            create new noise.</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Contacts Section DIV-->
+    <div class="contacts-section" id="contactsSection">
+      <div class="section-background">
+        <div class="section-column-box">
+          <div class="category-box">
+            <h1>EVENTS</h1>
+            <p>BAPTISMS</p>
+            <p>BABY SHOWERS</p>
+            <p>GRADUATION PARTIES</p>
+            <p>COMMUNITY ACTIVITIES</p>
+          </div>
+          <div class="section-divider">
+          </div>
+        </div>
+        <div class="section-box">
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+
+  <footer>
+
+  </footer>
+
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>
