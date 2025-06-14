@@ -8,7 +8,7 @@
     href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend+Zetta:wght@100..900&display=swap"
     rel="stylesheet">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title> Design Portfolio Website </title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -18,61 +18,90 @@
 
   <div class="full-image-wrap" id="fullImageWrap">
     <div class="gallery-arrow-left-full" id="galleryArrowLeftFull" onclick="backwardArrow()">
-      <button type="button" id="leftButton"> &#x2B98; </button>
+      <button type="button" id="leftButton">&#129168;</button>
     </div>
     <div class="full-image-box" id="fullImageBox">
-      <div class="para-box-side solid-black">
-        <div class="para-box-top">
-          <div class="para-box-top no-outline no-margin">
-            <p id="imageTitle" class="image-text-title-full"> </p>
-          </div>
-          <div class="para-box-top no-outline no-margin">
-            <p id="imageDate" class="image-text-date-full"> </p>
-          </div>
-        </div>
-        <div class="para-box-top">
-          <img id="fullImage" src="">
-        </div>
+      <div class="full-image-container">
+        <img id="fullImage" src="">
       </div>
       <span class="close" onclick="closeFullImage()">Close</span>
     </div>
     <div class="gallery-arrow-right-full" id="galleryArrowRightFull" onclick="forwardArrow()">
-      <button type="button" id="rightButton"> &#x2B9A; </button>
+      <button type="button" id="rightButton">&#129170;</button>
     </div>
   </div>
 
   <header class="header" id="header">
-    <div class="header-box">
+    <div class="header-title-box">
       <h1>MEHMET S.</h1>
-    </div>
-
-    <div class="header-box">
       <h2>MULTIMEDIA DESIGNER</h2>
     </div>
 
-    <div class="contact-box">
-      <button type="button" class="NavSocialButtons" onclick=" window.open('https://www.instagram.com/_mehmetsez_/','_blank')">
+    <div class="header-links-box reg-contacts">
+      <button type="button" class="NavSocialButtons"
+        onclick=" window.open('https://www.instagram.com/_mehmetsez_/','_blank')">
         <img src="./icons8-instagram-192.png" alt="">
-      <button type="button" class="NavSocialButtons" onclick=" window.open('https://www.youtube.com/@Mehmet_Sez','_blank')">
-        <img src="./icons8-youtube-150 (1).png" alt="">
-      </button>
-      <button type="button" class="NavSocialButtons" onclick=" window.open('https://www.linkedin.com/in/mehmetsdesigns/','_blank')">
-        <img src="./icons8-linkedin-384.png" alt="">
-      </button>
-      </a>
+        <button type="button" class="NavSocialButtons"
+          onclick=" window.open('https://www.youtube.com/@Mehmet_Sez','_blank')">
+          <img src="./icons8-youtube-150 (1).png" alt="">
+        </button>
+        <button type="button" class="NavSocialButtons"
+          onclick=" window.open('https://www.linkedin.com/in/mehmetsdesigns/','_blank')">
+          <img src="./icons8-linkedin-384.png" alt="">
+        </button>
+        </a>
     </div>
+
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    </nav>
+
   </header>
+
+  <div class="overlay" id="overlay"></div>
+
+  <nav class="menu" id="menu">
+    <button class="close-btn" id="closeBtn"></button>
+    <div class="menu-items">
+      <a href="#" class="menu-item active" id="photographyMenuButton" onclick="openPhotographySection()">Photography</a>
+      <a href="#" class="menu-item" id="filmMenuButton" onclick="openFilmSection()">Film</a>
+      <a href="#" class="menu-item" id="digitalMenuButton" onclick="openDigitalSection()">Digital</a>
+      <a href="#" class="menu-item" id="aboutMenuButton" onclick="openAboutSection()">About</a>
+      <a href="#" class="menu-item" id="contactsMenuButton" onclick="openContactsSection()">Contacts</a>
+    </div>
+    <div class="header-links-box menu-contacts">
+      <button type="button" class="NavSocialButtons"
+        onclick=" window.open('https://www.instagram.com/_mehmetsez_/','_blank')">
+        <img src="./icons8-instagram-192.png" alt="">
+        <button type="button" class="NavSocialButtons"
+          onclick=" window.open('https://www.youtube.com/@Mehmet_Sez','_blank')">
+          <img src="./icons8-youtube-150 (1).png" alt="">
+        </button>
+        <button type="button" class="NavSocialButtons"
+          onclick=" window.open('https://www.linkedin.com/in/mehmetsdesigns/','_blank')">
+          <img src="./icons8-linkedin-384.png" alt="">
+        </button>
+        </a>
+    </div>
+  </nav>
 
 
   <main class="content-box" id="contentBox">
     <div class="header-image-box" id="headerImageBox">
-      <div class="header-arrow-left" id="headerImageBack" onclick="backwardArrow()">
+      <div class="header-arrow-left" id="headerImageBack" onclick="backwardHeaderArrow()">
         <button type="button" id="headerLeftButton"> &#x2B98; </button>
       </div>
-      <div class="header-image-cover">
-        <img class="image" src="./Images/Mercedes AMG.png" alt="">
+      <div class="header-image-cover" id="headerImageCover">
+        <img class="header-image active-header" id="0" src="./Images/Header Images/Header-Squirrel.jpg" alt="">
+        <img class="header-image" id="1" src="./Images/Header Images/Header-Forest-2.jpg" alt="">
+        <img class="header-image" id="2" src="./Images/Header Images/Header-Spray.jpg" alt="">
+        <img class="header-image" id="3" src="./Images/Header Images/Header-Dog.jpg" alt="">
+        <img class="header-image" id="4" src="./Images/Header Images/Header-Tower.jpg" alt="">
       </div>
-      <div class="header-arrow-right" id="headerImageForward" onclick="forwardArrow()">
+      <div class="header-arrow-right" id="headerImageForward" onclick="forwardHeaderArrow()">
         <button type="button" id="headerRightButton"> &#x2B9A; </button>
       </div>
     </div>
@@ -83,170 +112,279 @@
       <p><button class="section-button" id="filmSectionButton" onclick="openFilmSection()">Film</button></p>
       <p><button class="section-button" id="digitalSectionButton" onclick="openDigitalSection()">Digital</button></p>
       <p><button class="section-button" id="aboutSectionButton" onclick="openAboutSection()">About</button></p>
-      <p><button class="section-button" id="contactsSectionButton" onclick="openContactsSection()">Contacts</button></p>
+      <p><button class="section-button" id="contactsSectionButton" onclick="openContactsSection()">Contacts</button>
+      </p>
     </div>
 
     <!--Photography Section DIV-->
     <div class="photography-section" id="photographySection">
 
-      <!-- EVENTS -->
+      <h1 class="section-title">PHOTOGRAPHY</h1>
+
+      <!-- PORTRAITS -->
       <div class="section-background">
-        <div class="section-column-box">
-          <div class="category-box">
-            <h1>EVENTS</h1>
-            <hr class="category-line">
-            <p>BAPTISMS</p>
-            <p>BABY SHOWERS</p>
-            <p>GRADUATION PARTIES</p>
-            <p>COMMUNITY ACTIVITIES</p>
-          </div>
-          <div class="section-divider">
+        <div class="category-box">
+          <h1>PORTRAITS</h1>
+        </div>
+
+        <hr class="category-line">
+
+        <div class="section-box">
+          <div class="image-box image-grid" id="imageBox">
+            <img class="image" id="0" src="./Images/Photography/Portrait/compressed-Portrait-15.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="1" src="./Images/Photography/Portrait/compressed-Portrait-19.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="2" src="./Images/Photography/Portrait/Portrait-4-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="3" src="./Images/Photography/Portrait/Portrait-7-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="4" src="./Images/Photography/Portrait/compressed-Portrait-21.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="5" src="./Images/Photography/Portrait/compressed-Portrait-11.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="6" src="./Images/Photography/Portrait/Sedef Grad Photo-33-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="7" src="./Images/Photography/Portrait/Portrait-2-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="8" src="./Images/Photography/Portrait/Kerem-Grad-1-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="9" src="./Images/Photography/Portrait/compressed-Portrait-20.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="10" src="./Images/Photography/Portrait/Portrait-1-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="11" src="./Images/Photography/Portrait/Portrait-5-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="12" src="./Images/Photography/Portrait/compressed-Portrait-18.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="13" src="./Images/Photography/Portrait/compressed-Portrait-24.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="14" src="./Images/Photography/Portrait/Sedef Grad Photo-51-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="15" src="./Images/Photography/Portrait/compressed-Portrait-23.jpg" alt=""
+              onclick="openFullImage(this)">
           </div>
         </div>
+      </div>
+
+      <!-- EVENTS -->
+      <div class="section-background">
+        <div class="category-box">
+          <h1>EVENTS</h1>
+        </div>
+
+        <hr class="category-line">
+
+        <div class="section-box">
+          <div class="image-box image-grid" id="imageBox">
+            <img class="image" id="0" src="./Images/Photography/Event/Events-4-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="1" src="./Images/Photography/Event/Events-23-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="2" src="./Images/Photography/Event/Events-22-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="3" src="./Images/Photography/Event/Events-14-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="4" src="./Images/Photography/Event/Art-Exhibit-7.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="5" src="./Images/Photography/Event/Events-6-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="6" src="./Images/Photography/Event/Events-20-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="7" src="./Images/Photography/Event/Events-10-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="8" src="./Images/Photography/Event/Events-7-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="9" src="./Images/Photography/Event/Events-25-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="10" src="./Images/Photography/Event/Events-5-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="11" src="./Images/Photography/Event/Events-15-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="12" src="./Images/Photography/Event/Events-24-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="13" src="./Images/Photography/Event/Art-Exhibit-5.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="14" src="./Images/Photography/Event/Events-9-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="15" src="./Images/Photography/Event/Events-18-min.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="16" src="./Images/Photography/Event/Art-Exhibit-9.jpg" alt=""
+              onclick="openFullImage(this)">
+            <img class="image" id="17" src="./Images/Photography/Event/Events-12-min.jpg" alt=""
+              onclick="openFullImage(this)">
+          </div>
+        </div>
+      </div>
+
+      <!-- CREATIVE -->
+      <div class="section-background">
+        <div class="category-box">
+          <h1>CREATIVE</h1>
+        </div>
+
+        <hr class="category-line">
 
         <div class="section-box">
           <div class="image-box image-grid" id="imageBox">
 
-            <div class="image-cover" id="0" onclick="openFullImage(this)">
-              <img class="image" src="./Images/Camera ClipArt.png" alt="">
-              <div class="image-text-title-small">
-                <p class="imageTitleText">Camera</p>
-              </div>
-              <div class="image-text-date-small">
-                <p class="imageDateText"> 10-2024 </p>
-              </div>
-            </div>
-
-            <div class="image-cover" id="1" onclick="openFullImage(this)">
-              <img class="image" src="./Images/hungryRender.jpg" alt="">
-              <div class="image-text-title-small">
-                <p class="imageTitleText">Camera</p>
-              </div>
-              <div class="image-text-date-small">
-                <p class="imageDateText"> 10-2024 </p>
-              </div>
-            </div>
-
-            <div class="image-cover" id="2" onclick="openFullImage(this)">
-              <img class="image" src="./Images/Mercedes AMG.png" alt="">
-              <div class="image-text-title-small">
-                <p class="imageTitleText">Camera</p>
-              </div>
-              <div class="image-text-date-small">
-                <p class="imageDateText"> 10-2024 </p>
-              </div>
-            </div>
           </div>
-        </div>
-      </div>
-
-      <!-- PORTAITS -->
-      <div class="section-background">
-        <div class="section-column-box">
-          <div class="category-box">
-            <h1>PORTRAITS</h1>
-            <hr class="category-line">
-            <p>PROFESSIONAL</p>
-            <p>BUSINESS</p>
-            <p>EXPRESSIVE</p>
-          </div>
-          <div class="section-divider">
-          </div>
-        </div>
-      </div>
-
-      <div class="section-background">
-        <div class="section-column-box">
-          <div class="category-box">
-            <h1>CREATIVE</h1>
-            <hr class="category-line">
-            <p>LONG EXPOSURE</p>
-            <p></p>
-            <p></p>
-          </div>
-          <div class="section-divider">
-          </div>
-        </div>
-
-        <div class="section-box">
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
 
     <!--Film Section DIV-->
     <div class="film-section" id="filmSection">
+
+      <h1 class="section-title">FILM</h1>
+
+      <!-- SHORT FILM -->
       <div class="section-background">
-        <div class="section-column-box">
-          <div class="category-box">
-            <h1>LET THE<br>WATER RUN</h1>
-            <hr class="category-line">
-            <p>SHORT THRILLER FILM</p>
-          </div>
-          <div class="section-divider">
-          </div>
+        <div class="category-box">
+          <h1>LET THE WATER RUN</h1>
+          <h2>SHORT THRILLER FILM</h2>
         </div>
 
+        <hr class="category-line">
+
         <div class="section-box">
-          <p>yue</p>
+          <div class="section-content">
+            <iframe class="section-content" src="https://youtube.com/embed/UmzlwPlz628?si=v7GzybpyjglGlLwT">
+            </iframe>
+            <h1>Technical Information</h1>
+            <hr class="category-line">
+            <p>Panaosnic fz300</p>
+            <p>Gimbal</p>
+            <p>SmallRig Tripod</p>
+
+          </div>
+
+          <p>Shot on a Panasonic fz300 and edited through Premiere Pro, “Let The Water Run” is a short form thriller
+            film shot and composed over a 3 week period. Meant to invoke a feeling of raw realism, through a jarring
+            ending showcasing the harsh realities of the world. Viewers are left shocked as they are thrown from an
+            uncanny, uncomfortable space back into a very real location showcasing very real consequences. Blues,
+            light
+            magentas and desaturated greens were incorporated in the color grading to establish a cold, dark, dreamy
+            atmosphere. Practical lights with dark shadows and raised highlights brought forth a depressive mood,
+            utilizing tungsten light tones to add bits of warmth throughout the film. Cinematography involved a great
+            deal of cycling through extreme angles, close-ups and wide shots to symbolise the character’s changing
+            emotions and to leave the audience feel uncomfortable. The set design allowed for the uncanniness to leak
+            through the screen as everything was created as minimally as possible in a claustrophobic way.</p>
+        </div>
+      </div>
+
+      <!-- HAIR SALON -->
+      <div class="section-background">
+        <div class="category-box">
+          <h1>HAIR SALON COMMERCIAL</h1>
+          <h2>BRAND ENHANCEMENT</h2>
+        </div>
+
+        <hr class="category-line">
+
+        <div class="section-box">
+          <div class="section-content">
+            <iframe class="section-content" src="https://youtube.com/embed/lbRWK_94bns?si=sEtGuR774_zUv9ki">
+            </iframe>
+            <h1>Technical Information</h1>
+            <hr class="category-line">
+            <p>Panaosnic fz300</p>
+            <p>Gimbal</p>
+            <p>SmallRig Tripod</p>
+
+          </div>
+          <p>Shot on a Panasonic fz300 and edited through Premiere Pro, “Let The Water Run” is a short form thriller
+            film shot and composed over a 3 week period. Meant to invoke a feeling of raw realism, through a jarring
+            ending showcasing the harsh realities of the world. Viewers are left shocked as they are thrown from an
+            uncanny, uncomfortable space back into a very real location showcasing very real consequences. Blues,
+            light
+            magentas and desaturated greens were incorporated in the color grading to establish a cold, dark, dreamy
+            atmosphere. Practical lights with dark shadows and raised highlights brought forth a depressive mood,
+            utilizing tungsten light tones to add bits of warmth throughout the film. Cinematography involved a great
+            deal of cycling through extreme angles, close-ups and wide shots to symbolise the character’s changing
+            emotions and to leave the audience feel uncomfortable. The set design allowed for the uncanniness to leak
+            through the screen as everything was created as minimally as possible in a claustrophobic way.</p>
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
 
     <!--Digital Section DIV-->
     <div class="digital-section" id="digitalSection">
+
+      <h1 class="section-title">DIGITAL</h1>
+
       <div class="section-background">
-        <div class="section-column-box">
-          <div class="category-box">
-            <h1>EVENTS</h1>
-            <hr class="category-line">
-            <p>BAPTISMS</p>
-            <p>BABY SHOWERS</p>
-            <p>GRADUATION PARTIES</p>
-            <p>COMMUNITY ACTIVITIES</p>
-          </div>
-          <div class="section-divider">
-          </div>
+        <div class="category-box">
+          <h1>3D RENDERS</h1>
         </div>
 
+        <hr class="category-line">
+
         <div class="section-box">
-          <p>yue</p>
         </div>
+
       </div>
     </div>
 
+
+
+
+
+
+
+
+
+
     <!--About Section DIV-->
     <div class="about-section" id="aboutSection">
+
+      <h1 class="section-title">ABOUT</h1>
+
       <!-- BIOGRAPHY -->
       <div class="section-background">
-        <div class="section-column-box">
-          <div class="category-box">
-            <h1>ARTIST<br>BIOGRAPHY</h1>
-            <hr class="category-line">
-            <!-- <p>An insight into my personal processes that I use for design.</p> -->
-          </div>
-          <div class="section-divider">
-            <div class="category-image">
-              <img src="Compressed Images/Headshot Profile-min.jpg" alt="">
-            </div>
-          </div>
+        <div class="category-box">
+          <h1>ARTIST BIOGRAPHY</h1>
+          <!-- <p>An insight into my personal processes that I use for design.</p> -->
         </div>
+
+        <hr class="category-line">
+
         <div class="section-box">
-          <p>Hi! I am Mehmet Sezer, a multimedia designer. Cinematic photography, film production, graphic illustration,
+          <div class="category-image">
+            <img src="Compressed Images/Headshot Profile-min.jpg" alt="">
+          </div>
+          <p>Hi! I am Mehmet Sezer, a multimedia designer. Cinematic photography, film production, graphic
+            illustration,
             UI/UX and other deliverables are what I specialize in.</p>
         </div>
       </div>
 
       <!-- PHILOSOPHY -->
       <div class="section-background">
-        <div class="section-column-box">
-          <div class="category-box">
-            <h1>PHILOSOPHY<br>OF CREATION</h1>
-            <hr class="category-line">
-            <!-- <p>An insight into my personal processes that I use for design.</p> -->
-          </div>
-          <div class="section-divider">
-          </div>
+        <div class="category-box">
+          <h1>PHILOSOPHY OF CREATION</h1>
+          <p>An insight into my personal processes that I use for design.</p>
         </div>
+
+        <hr class="category-line">
 
         <div class="section-box">
           <p>Real world happenings serve as an influence for every creative endeavor. Film, photo, paint, and other
@@ -258,8 +396,20 @@
       </div>
     </div>
 
+
+
+
+
+
+
+
+
+
     <!--Contacts Section DIV-->
     <div class="contacts-section" id="contactsSection">
+
+      <h1 class="section-title">CONTACTS</h1>
+
       <div class="section-background">
         <div class="section-column-box">
           <div class="category-box">
@@ -273,6 +423,15 @@
           </div>
         </div>
         <div class="section-box">
+          <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="First and Last">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="name@domain.com" required>
+            <label for="message">Your Message:</label>
+            <textarea name="message" id="message" placeholder="Tell us your thoughts..."></textarea>
+            <input type="submit" value="Submit Feedback">
+          </form>
         </div>
       </div>
     </div>
