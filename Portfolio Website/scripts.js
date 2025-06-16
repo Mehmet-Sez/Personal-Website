@@ -6,6 +6,7 @@ let galleryArrowLeftFull = document.getElementById("galleryArrowLeftFull");
 let galleryArrowRightFull = document.getElementById("galleryArrowRightFull");
 let fullImage = document.getElementById("fullImage");
 let contentBox = document.getElementById("contentBox");
+let html = document.getElementById("html");
 let body = document.getElementById("body");
 let header = document.getElementById("header");
 let imageTitle = document.getElementById("imageTitle");
@@ -140,20 +141,14 @@ function openFullImage(div) {
     fullImage.src = pic.src;
     fullImageWrap.style.display = "flex";
     fullImageWrap.style.transition = "all 1s";
-    fullImageBox.style.display = "flex";
-    galleryArrowLeftFull.style.display = "flex";
-    galleryArrowRightFull.style.display = "flex";
-    html.style.overflowy = "hidden";
     fullImage.src = pic.src;
     header.style.filter = "blur(5px)";
     contentBox.style.filter = "blur(5px)";
+    html.style.overflowY = "hidden";
 }
 
 function closeFullImage() {
     fullImageWrap.style.display = "none";
-    fullImageBox.style.display = "none";
-    galleryArrowLeftFull.style.display = "none";
-    galleryArrowRightFull.style.display = "none";
     header.style.filter = "blur(0px)";
     contentBox.style.filter = "blur(0px)";
     html.style.overflowY = "scroll";

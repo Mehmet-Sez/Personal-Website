@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
 
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,17 +17,19 @@
 
 
   <div class="full-image-wrap" id="fullImageWrap">
-    <div class="gallery-arrow-left-full" id="galleryArrowLeftFull" onclick="backwardArrow()">
-      <button type="button" id="leftButton">&#129168;</button>
-    </div>
-    <div class="full-image-box" id="fullImageBox">
-      <div class="full-image-container">
-        <img id="fullImage" src="">
+    <div class="full-image-second" id="fullImageSecond">
+      <div class="gallery-arrow-full" id="galleryArrowLeftFull" onclick="backwardArrow()">
+        <button class="left-button" type="button" id="leftButton">&#11207;</button>
       </div>
-      <span class="close" onclick="closeFullImage()">Close</span>
-    </div>
-    <div class="gallery-arrow-right-full" id="galleryArrowRightFull" onclick="forwardArrow()">
-      <button type="button" id="rightButton">&#129170;</button>
+      <div class="full-image-box" id="fullImageBox">
+        <div class="full-image-container">
+          <img id="fullImage" src="">
+        </div>
+        <span class="close" onclick="closeFullImage()">Close</span>
+      </div>
+      <div class="gallery-arrow-full" id="galleryArrowRightFull" onclick="forwardArrow()">
+        <button class="right-button" type="button" id="rightButton">&#11208;</button>
+      </div>
     </div>
   </div>
 
