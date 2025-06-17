@@ -328,6 +328,10 @@ header {
     scale: 0.9;
 }
 
+.left-button:active {
+    scale: 0.6;
+}
+
 .right-button {
     font-size: 5rem;
     font-weight: 100;
@@ -344,6 +348,10 @@ header {
 .right-button:hover {
     cursor: pointer;
     scale: 0.9;
+}
+
+.right-button:active {
+    scale: 0.6;
 }
 
 .full-image-box {
@@ -648,40 +656,17 @@ header {
     display: block;
 }
 
-.header-arrow-left {
-    background-color: rgb(0, 0, 0);
-    z-index: 12;
-    display: flex;
-    padding: 0;
-    /* margin-left: 1rem; */
-    align-items: center;
-    position: relative;
-    text-align: right;
-    justify-content: start;
-}
-
-.header-arrow-left:hover {
-    background-color: rgb(46, 46, 46);
-    cursor: pointer;
-}
-
-.header-arrow-right {
+.header-arrow {
     background-color: rgb(0, 0, 0);
     z-index: 12;
     display: flex;
     padding: 0;
     align-items: center;
     position: relative;
-    text-align: right;
-    justify-content: end;
+    transition: all 0.5s;
 }
 
-.header-arrow-right:hover {
-    background-color: rgb(46, 46, 46);
-    cursor: pointer;
-}
-
-#headerLeftButton {
+.arrow {
     font-size: clamp(1rem, 2vw, 4rem);
     font-weight: 100;
     background-color: rgba(0, 0, 0, 0);
@@ -693,26 +678,13 @@ header {
     border: none;
 }
 
-#headerLeftButton:hover {
-    background-color: rgba(46, 46, 46, 0);
+.header-arrow:hover {
     cursor: pointer;
 }
 
-#headerRightButton {
-    font-size: clamp(1rem, 2vw, 4rem);
-    font-weight: 100;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-    padding: 0;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-    margin-top: 15%;
-    border: none;
-}
-
-#headerRightButton:hover {
-    background-color: rgba(46, 46, 46, 0);
+.header-arrow:hover .arrow {
     cursor: pointer;
+    scale: 0.9;
 }
 
 .image-box {
@@ -759,6 +731,11 @@ header {
 .section-content iframe {
     width: 100%;
     aspect-ratio: 16/9;
+    border: none;
+}
+
+.section-content img {
+    width: 100%;
 }
 
 .section-content h1 {
@@ -866,7 +843,6 @@ footer {
         width: 70%;
         max-height: 40vw;
         padding: 0 0.5rem 0 0.5rem;
-        overflow: scroll;
     }
 
     .section-box p {
@@ -1028,7 +1004,6 @@ footer {
         width: 90%;
         max-height: 25vh;
         padding: 0.5rem;
-        overflow: scroll;
     }
 
     .section-title {
