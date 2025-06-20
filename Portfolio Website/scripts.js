@@ -81,6 +81,8 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+
+
 function forwardHeaderArrow() {
     currentHeaderImage.className = currentHeaderImage.className.replace(/(?:^|\s)active-header(?!\S)/g, '');
     if (currentHeaderIndex > headerImageArray.length) {
@@ -106,6 +108,8 @@ function backwardHeaderArrow() {
         currentHeaderImage.className = currentHeaderImage.className += " active-header";
     }
 }
+
+
 
 // FULL IMAGE FUNCTIONS 
 function imageGallery(allDiv) {
@@ -153,43 +157,6 @@ function closeFullImage() {
     contentBox.style.filter = "blur(0px)";
     html.style.overflowY = "scroll";
 }
-
-// OLD GALLERY CODE
-// function openFullImage(div) {
-//     imageGallery(div.parentElement);
-//     currentImage = div;
-//     currentIndex = div.id;
-//     pic = div.getElementsByClassName("image")[0];
-//     imageTitleNew = div.getElementsByClassName("imageTitleText")[0];
-//     imageDateNew = div.getElementsByClassName("imageDateText")[0];
-//     fullImage.src = pic.src;
-//     imageTitle.innerText = imageTitleNew.innerText;
-//     imageDate.innerText = imageDateNew.innerText;
-//     fullImageWrap.style.display = "flex";
-//     fullImageWrap.style.transition = "all 1s";
-//     fullImageBox.style.display = "flex";
-//     galleryArrowLeftFull.style.display = "flex";
-//     galleryArrowRightFull.style.display = "flex";
-//     fullImage.src = pic.src;
-//     imageTitle.innerText = imageTitleNew.innerText;
-//     imageDate.innerText = imageDateNew.innerText;
-//     contentBox.style.filter = "blur(5px)";
-//     body.style.height = "100%";
-//     body.style.overflowY = "hidden";
-//     header.style.filter = "blur(5px)";
-// }
-
-// function closeFullImage() {
-//     fullImageWrap.style.display = "none";
-//     fullImageBox.style.display = "none";
-//     galleryArrowLeftFull.style.display = "none";
-//     galleryArrowRightFull.style.display = "none";
-//     contentBox.style.filter = "blur(0px)";
-//     body.style.height = "0";
-//     body.style.overflowY = "scroll";
-//     header.style.filter = "blur(0px)";
-// }
-
 
 
 
