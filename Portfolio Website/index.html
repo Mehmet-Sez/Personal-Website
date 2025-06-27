@@ -18,17 +18,19 @@
 
   <div class="full-image-wrap" id="fullImageWrap">
     <div class="full-image-second" id="fullImageSecond">
-      <div class="gallery-arrow-full" id="galleryArrowLeftFull" onclick="backwardArrow()">
-        <button class="left-button" type="button" id="leftButton">&#11207;</button>
+      <div class="gallery-arrow-full" id="galleryArrowLeftFull">
+        <button class="left-button" type="button" id="leftButton" onclick="backwardArrow()">&#11207;</button>
       </div>
       <div class="full-image-box" id="fullImageBox">
         <div class="full-image-container">
           <img id="fullImage" src="">
         </div>
-        <span class="close" onclick="closeFullImage()">Close</span>
+        <div class="close-box">
+          <span class="close" onclick="closeFullImage()">Close</span>
+        </div>
       </div>
-      <div class="gallery-arrow-full" id="galleryArrowRightFull" onclick="forwardArrow()">
-        <button class="right-button" type="button" id="rightButton">&#11208;</button>
+      <div class="gallery-arrow-full" id="galleryArrowRightFull">
+        <button class="right-button" type="button" id="rightButton" onclick="forwardArrow()">&#11208;</button>
       </div>
     </div>
   </div>
@@ -147,10 +149,6 @@
             <img class="image" id="5" src="./Images/Photography/Portrait/compressed-Portrait-11.jpg" alt=""
               onclick="openFullImage(this)">
             <img class="image" id="6" src="./Images/Photography/Portrait/Sedef Grad Photo-33-min.jpg" alt=""
-              onclick="openFullImage(this)">
-            <img class="image" id="6" src="./Images/Digital/3D Renders/Money Hungry-min.jpg" alt=""
-              onclick="openFullImage(this)">
-            <img class="image" id="6" src="./Images/Digital/3D Renders/Money Hungry-min.jpg" alt=""
               onclick="openFullImage(this)">
             <img class="image" id="7" src="./Images/Photography/Portrait/Portrait-2-min.jpg" alt=""
               onclick="openFullImage(this)">
@@ -487,9 +485,28 @@
         <div class="section-box">
           <div class="section-content">
             <h1>SEND A CUSTOM MESSAGE</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea perferendis, aspernatur nostrum
-              necessitatibus neque aliquam vero adipisci illum, id facere esse consequatur quaerat, eligendi iure labore
-              maiores nihil nesciunt eius?</p>
+            <div class="contact-box">
+              <form class="contact-form" method="POST" action="#contact" id="contactForm">
+                <div class="form-item">
+                  <label for="contact-name">Full Name</label>
+                  <input id="contact-name" name="name" type="text" required>
+                </div>
+                <div class="form-item">
+                  <label for="contact-email">E-Mail</label>
+                  <input id="contact-email" name="email" type="email" required>
+                </div>
+                <div class="form-item">
+                  <label for="contact-subject">Subject</label>
+                  <input id="contact-subject" name="subject" type="text" required>
+                </div>
+                <div class="form-item">
+                  <label for="contact-message">Message</label>
+                  <textarea id="contact-message" name="message" rows="4" required></textarea>
+                </div>
+                <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+                <button class="form-button" type="submit">Send Message</button>
+              </form>
+            </div>
           </div>
 
           <div class="buffer-box">

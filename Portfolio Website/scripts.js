@@ -20,6 +20,28 @@ let headerImageCover = document.getElementById("headerImageCover");
 let currentHeaderIndex = 0;
 let currentHeaderImage = headerImageCover.getElementsByTagName('img')[currentHeaderIndex];
 
+document.querySelectorAll('.form-item input, .form-item textarea').forEach(input => {
+    const label = input.parentElement.querySelector('label');
+
+    input.addEventListener('focus', () => {
+        label.style.top = '-10px';
+        label.style.fontSize = 'clamp(0.25rem 5vw 3rem)';
+        label.style.color = 'white';
+    });
+
+    input.addEventListener('blur', () => {
+        if (input.value.trim() === '') {
+            if (input.tagName.toLowerCase() === 'textarea') {
+                label.style.top = '75%';
+            } else {
+                label.style.top = '50%';
+            }
+            label.style.fontSize = 'clamp(0.5rem 5vw 5rem)';
+            label.style.color = 'white';
+        }
+    });
+});
+
 // Section Variables
 let sectionButtons = document.getElementById("sectionButon");
 
