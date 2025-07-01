@@ -19,14 +19,14 @@ body {
     padding: 0;
     position: relative;
     width: 100vw;
-    background-color: rgba(15, 15, 15);
+    background-color: rgb(0, 0, 0);
     transition: 0.5s;
 }
 
 header {
     position: fixed;
     margin: 0 auto;
-    height: 3.5vw;
+    height: 2.5vw;
     width: 100vw;
     background-color: #000;
     border-bottom: solid 0.125rem white;
@@ -49,24 +49,23 @@ header {
 .header-title-box h1 {
     color: white;
     font-weight: 200;
-    font-size: clamp(0.5rem, 2vw, 4rem);
+    font-size: clamp(0.5rem, 2vw, 2rem);
 }
 
 .header-title-box h2 {
     color: goldenrod;
     font-weight: 200;
     margin-left: 1rem;
-    font-size: clamp(0.5rem, 1vw, 4rem);
+    font-size: clamp(0.5rem, 2vw, 1.25rem);
 }
 
 .header-links-box {
     display: flex;
-    width: 8vw;
+    width: 6vw;
     margin: 0;
     margin-right: 2rem;
     justify-content: right;
-    align-items: end;
-    margin-top: 0.5vw;
+    align-items: center;
 }
 
 .reg-contacts {
@@ -82,7 +81,8 @@ header {
     border: none;
     color: white;
     transition: 200ms;
-    width: 2vw;
+    align-items: center;
+    width: 1.5vw;
 }
 
 .NavSocialButtons img {
@@ -334,6 +334,7 @@ header {
 }
 
 .full-image-box img {
+    background-color: #000;
     width: 100%;
     max-height: 35vw;
     outline: solid;
@@ -378,7 +379,7 @@ header {
 .content-box {
     z-index: 5;
     color: ivory;
-    background-color: rgb(15, 15, 15, 0.6);
+    background-color: rgb(0, 0, 0);
     width: 100vw;
     margin: 0 auto;
     padding: 0.5% 0;
@@ -407,12 +408,12 @@ header {
 }
 
 .category-box h1 {
-    font-size: clamp(1rem, 2vw, 5rem);
+    font-size: clamp(1rem, 2vw, 3rem);
     /* text-decoration: underline; */
     color: white;
     margin: 0 auto;
     margin-top: 1rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .category-box h2 {
@@ -497,11 +498,11 @@ header {
 }
 
 .section-box p {
-    font-size: clamp(0.1rem, 1vw, 2rem);
+    font-size: clamp(0.5rem, 1vw, 1.25rem);
     margin: 0 auto;
     color: white;
-    font-weight: 400;
-    line-height: clamp(1.5rem, 3vw, 5rem);
+    font-weight: 300;
+    line-height: clamp(1rem, 3vw, 3rem);
 }
 
 .scroll-box {
@@ -608,11 +609,11 @@ header {
 .section-button {
     background: none;
     border: none;
-    margin: 1vw auto;
+    margin: 0.5vw auto;
     transition: all 0.3s ease;
     font: inherit;
     color: white;
-    font-size: clamp(0.5rem, 1vw, 5rem);
+    font-size: clamp(0.5rem, 1vw, 1.25rem);
     font-weight: 200;
 }
 
@@ -706,7 +707,15 @@ header {
 .section-content iframe {
     width: 100%;
     aspect-ratio: 16/9;
+    /* margin: 0 auto; */
     border: none;
+}
+
+.yt-short iframe{
+    margin: 0 auto;
+    text-align: center;
+    max-width: clamp(10rem, 20vw, 80rem);
+    aspect-ratio: 9/16;
 }
 
 .section-content img {
@@ -714,12 +723,12 @@ header {
 }
 
 .section-content h1 {
-    font-size: clamp(0.5rem, 1.5vw, 3rem);
+    font-size: clamp(0.5rem, 1vw, 2rem);
     color: white;
     text-align: center;
     margin: 0 auto;
     margin-top: 1rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .section-content h2 {
@@ -727,11 +736,11 @@ header {
 }
 
 .section-content p {
-    font-size: clamp(0.1rem, 1vw, 2rem);
-    margin: 0;
-    text-align: left;
+    font-size: clamp(0.5rem, 1vw, 1.25rem);
+    margin: 0 auto;
+    text-align: center;
     line-height: 2.5rem;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 .image-box {
@@ -753,7 +762,13 @@ header {
 }
 
 .digital-box img {
-    max-height: clamp(10rem, 14vw, 30rem);
+    max-height: clamp(10rem, 16vw, 60rem);
+}
+
+.digital-box iframe {
+    margin: 0 auto;
+    max-width: clamp(10rem, 16vw, 60rem);
+    aspect-ratio: 9/16;
 }
 
 .image-box img:hover {
@@ -770,6 +785,7 @@ header {
 
 .contact-form {
     display: flex;
+    margin: 0 auto;
     width: 100%;
     flex-direction: column;
     gap: 10%;
@@ -799,7 +815,7 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 10rem;
+    font-size: clamp(1rem 1vw 5rem);
     color: rgb(255, 255, 255);
     pointer-events: none;
     transition: all 0.3s ease;
@@ -841,18 +857,18 @@ header {
 footer {
     display: flex;
     color: ivory;
-    background-color: rgb(15, 15, 15, 0.6);
+    background-color: rgba(0, 0, 0);
     width: 100vw;
-    height: 20vw;
-    border-top: 1px solid white;
+    height: 5vw;
     text-align: center;
     overflow: hidden;
-    align-items: end;
+    align-items: center;
 }
 
 footer img {
+    position: relative;
     margin: 0 auto;
-    width: 50%;
+    width: 20vw;
 }
 
 ::-webkit-scrollbar {
