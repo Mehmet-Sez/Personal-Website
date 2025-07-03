@@ -19,7 +19,7 @@ body {
     padding: 0;
     position: relative;
     width: 100vw;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     transition: 0.5s;
 }
 
@@ -56,7 +56,7 @@ header {
     color: goldenrod;
     font-weight: 200;
     margin-left: 1rem;
-    font-size: clamp(0.5rem, 2vw, 1.25rem);
+    font-size: clamp(0.75rem, 1vw, 1rem);
 }
 
 .header-links-box {
@@ -391,7 +391,7 @@ header {
     display: flex;
     flex-direction: column;
     margin: 2vw auto;
-    padding: 0%;
+    padding: 0;
     background-color: #000000;
     align-items: flex-start;
     position: relative;
@@ -493,7 +493,7 @@ header {
     margin: 0 auto;
     padding: 1.5rem;
     padding-top: 0;
-    align-items: start;
+    align-items: center;
     position: relative;
 }
 
@@ -637,7 +637,7 @@ header {
     display: flex;
     width: 100vw;
     margin: 0 auto;
-    margin-top: 3vw;
+    margin-top: 1vw;
     height: 35vw;
     justify-content: center;
     align-items: center;
@@ -711,7 +711,7 @@ header {
     border: none;
 }
 
-.yt-short iframe{
+.yt-short iframe {
     margin: 0 auto;
     text-align: center;
     max-width: clamp(10rem, 20vw, 80rem);
@@ -852,6 +852,44 @@ header {
 
 .form-button:active {
     background-color: goldenrod;
+}
+
+.socials-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin: 1rem auto;
+    text-align: left;
+}
+
+.ContactSocialButtons {
+    background-color: rgba(164, 21, 21, 0);
+    text-align: left;
+    border: none;
+    color: white;
+    transition: 200ms;
+    width: 3vw;
+}
+
+.ContactSocialButtons img {
+    width: 100%;
+}
+
+.ContactSocialButtons p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    font-size: clamp(1rem 2vw 5rem);
+    font-weight: 200;
+    padding: 0;
+}
+
+.ContactSocialButtons:hover {
+    cursor: pointer;
+    color: #000;
+    scale: 0.95;
 }
 
 footer {
