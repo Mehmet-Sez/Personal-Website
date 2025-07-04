@@ -15,27 +15,31 @@ html {
 }
 
 body {
-    margin: auto;
-    padding: 0;
-    position: relative;
-    width: 100vw;
     background-color: rgb(255, 255, 255);
     transition: 0.5s;
+    position: relative;
 }
 
-header {
-    position: fixed;
-    margin: 0 auto;
-    height: 2.5vw;
-    width: 100vw;
-    background-color: #000;
-    border-bottom: solid 0.125rem white;
-    padding: 0;
-    z-index: 8;
+.header {
     display: flex;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+    z-index: 8;
+    margin: 0 auto;
+    width: 100vw;
+    height: 2.5vw;
+    padding: 0;
+    background-color: #000;
+    border-bottom: solid 0.125rem white;
     filter: blur(0px);
+}
+
+.header-wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 100vw;
 }
 
 .header-title-box {
@@ -387,18 +391,38 @@ header {
 }
 
 .section-couple {
-    width: 95vw;
+    max-width: 95%;
     margin: 2vw auto;
     display: flex;
+    flex-wrap: wrap;
     position: relative;
+    align-items: flex-start;
     padding: 0;
 }
 
+.section-couple .section-background {
+    max-width: 30%;
+    margin: 0 auto;
+}
+
+.section-couple .section-box {
+    flex-direction: column;
+}
+
+.section-couple .category-box h1 {
+    font-size: clamp(1rem, 1vw, 2rem);
+}
+
+.section-couple .category-box h2 {
+    font-size: clamp(0.5rem, 1vw, 1rem);
+}
+
 .section-background {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0 2vw;
+    margin: 0 auto;
+    justify-content: center;
     padding: 0;
     background-color: #000000;
     align-items: flex-start;
@@ -501,7 +525,7 @@ header {
     margin: 0 auto;
     padding: 1.5rem;
     padding-top: 0;
-    align-items: center;
+    align-items: start;
     position: relative;
 }
 
@@ -538,7 +562,7 @@ header {
     display: block;
     color: ivory;
     background-color: rgb(0, 0, 0);
-    width: 100vw;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0.5% 0;
     filter: blur(0px);
@@ -551,7 +575,7 @@ header {
     display: none;
     color: ivory;
     background-color: rgb(0, 0, 0);
-    width: 100vw;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0.5% 0;
     outline-width: 0.125rem;
@@ -565,7 +589,7 @@ header {
     display: none;
     color: ivory;
     background-color: rgb(0, 0, 0);
-    width: 100vw;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0.5% 0;
     outline-width: 0.125rem;
@@ -579,7 +603,7 @@ header {
     display: none;
     color: ivory;
     background-color: rgb(0, 0, 0);
-    width: 100vw;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0.5% 0;
     outline-width: 0.125rem;
@@ -593,7 +617,7 @@ header {
     display: none;
     color: ivory;
     background-color: rgb(0, 0, 0);
-    width: 100vw;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0.5% 0;
     outline-width: 0.125rem;
@@ -646,7 +670,7 @@ header {
     position: relative;
     z-index: 8;
     display: flex;
-    width: 100vw;
+    max-width: 100%;
     margin: 0 auto;
     margin-top: 1vw;
     height: 35vw;
@@ -773,12 +797,12 @@ header {
 }
 
 .digital-box img {
-    max-height: clamp(10rem, 16vw, 60rem);
+    max-height: clamp(10rem, 10vw, 40rem);
 }
 
 .digital-box iframe {
     margin: 0 auto;
-    max-width: clamp(10rem, 16vw, 60rem);
+    max-width: clamp(10rem, 10vw, 40rem);
     aspect-ratio: 9/16;
 }
 
@@ -974,9 +998,13 @@ footer img {
 
     .section-background {
         flex-direction: column;
-        width: 90vw;
+        max-width: 90%;
         padding: 0 1rem 0 1rem;
         margin: 2rem auto;
+    }
+
+    .section-couple {
+        flex-direction: column;
     }
 
     .scroll-box {
@@ -1005,7 +1033,7 @@ footer img {
     }
 
     .section-content iframe {
-        width: 100%;
+        max-width: 100%;
         text-align: center;
         justify-content: center;
     }
