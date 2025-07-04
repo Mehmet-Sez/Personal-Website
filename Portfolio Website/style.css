@@ -386,11 +386,19 @@ header {
     filter: blur(0px);
 }
 
-.section-background {
+.section-couple {
     width: 95vw;
+    margin: 2vw auto;
+    display: flex;
+    position: relative;
+    padding: 0;
+}
+
+.section-background {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 2vw auto;
+    margin: 0 2vw;
     padding: 0;
     background-color: #000000;
     align-items: flex-start;
@@ -604,6 +612,7 @@ header {
     position: relative;
     text-align: center;
     background-color: black;
+    justify-content: center;
 }
 
 .section-button {
@@ -615,6 +624,8 @@ header {
     color: white;
     font-size: clamp(0.5rem, 1vw, 1.25rem);
     font-weight: 200;
+    text-align: center;
+    justify-content: center;
 }
 
 .section-button:hover {
