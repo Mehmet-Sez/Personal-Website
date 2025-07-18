@@ -17,10 +17,6 @@
 
 
   <div class="full-image-wrap" id="fullImageWrap">
-    <div class="full-image-second" id="fullImageSecond">
-      <div class="gallery-arrow-full" id="galleryArrowLeftFull">
-        <button class="left-button" type="button" id="leftButton" onclick="backwardArrow()">&#11207;</button>
-      </div>
       <div class="full-image-box" id="fullImageBox">
         <div class="full-image-container">
           <img id="fullImage" src="">
@@ -29,10 +25,6 @@
           <span class="close" onclick="closeFullImage()">Close</span>
         </div>
       </div>
-      <div class="gallery-arrow-full" id="galleryArrowRightFull">
-        <button class="right-button" type="button" id="rightButton" onclick="forwardArrow()">&#11208;</button>
-      </div>
-    </div>
   </div>
 
   <div class="header-wrap">
@@ -268,12 +260,6 @@
             <div class="section-content">
               <iframe class="section-content" src="https://youtube.com/embed/UmzlwPlz628?si=v7GzybpyjglGlLwT">
               </iframe>
-              <h1>Technical Information</h1>
-              <hr class="category-line">
-              <p>Panasonic fz300</p>
-              <p>Zhiyun Weebill-S Handheld Gimbal Stabilizer</p>
-              <p>SmallRig Tripod</p>
-
             </div>
 
             <div class="scroll-box">
@@ -309,12 +295,6 @@
                 <iframe class="section-content" src="https://youtube.com/embed/8XKkrpZWe1A?si=2bGXxKo0pPDFyayO">
                 </iframe>
               </div>
-              <h1>Technical Information</h1>
-              <hr class="category-line">
-              <p>Panasonic fz300</p>
-              <p>Zhiyun Weebill-S Handheld Gimbal Stabilizer</p>
-              <p>SmallRig Tripod</p>
-
             </div>
 
             <div class="scroll-box">
@@ -339,12 +319,6 @@
             <div class="section-content">
               <iframe class="section-content" src="https://youtube.com/embed/lbRWK_94bns?si=sEtGuR774_zUv9ki">
               </iframe>
-              <h1>Technical Information</h1>
-              <hr class="category-line">
-              <p>Panasonic fz300</p>
-              <p>Zhiyun Weebill-S Handheld Gimbal Stabilizer</p>
-              <p>SmallRig Tripod</p>
-
             </div>
 
             <div class="scroll-box">
@@ -631,25 +605,14 @@
           <div class="section-content">
             <h1>SEND A CUSTOM MESSAGE</h1>
             <div class="contact-box">
-              <form class="contact-form" method="POST" action="#contact" id="contactForm">
-                <div class="form-item">
-                  <label for="contact-name">Full Name</label>
-                  <input id="contact-name" name="name" type="text" required>
-                </div>
-                <div class="form-item">
-                  <label for="contact-email">E-Mail</label>
-                  <input id="contact-email" name="email" type="email" required>
-                </div>
-                <div class="form-item">
-                  <label for="contact-subject">Subject</label>
-                  <input id="contact-subject" name="subject" type="text" required>
-                </div>
-                <div class="form-item">
-                  <label for="contact-message">Message</label>
-                  <textarea id="contact-message" name="message" rows="4" required></textarea>
-                </div>
-                <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
-                <button class="form-button" type="submit">Send Message</button>
+              <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="dec6d72b-5d4d-4633-92e8-4f1d53b7a202">
+                <input type="text" name="name" placeholder="First Name" class="contact-input" required>
+                <input type="text" name="name" placeholder="Last Name" class="contact-input" required>
+                <input type="email" name="email" placeholder="Email" class="contact-input" required>
+                <input type="text" name="name" placeholder="Subject" class="contact-input" required>
+                <textarea name="message" placeholder="Message" class="contact-input" required></textarea>
+                <button type="submit">Send!</button>
               </form>
             </div>
           </div>

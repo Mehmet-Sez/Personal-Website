@@ -389,7 +389,7 @@ body {
 
 .section-couple {
     max-width: 95%;
-    margin: 2vw auto;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -398,8 +398,8 @@ body {
 }
 
 .section-couple .section-background {
-    max-width: 30%;
-    margin: 0 auto;
+    max-width: 40%;
+    margin: 2% auto;
 }
 
 .section-couple .section-box {
@@ -536,12 +536,11 @@ body {
 }
 
 .scroll-box {
-    border-top: 2px solid rgba(255, 255, 255, 0.75);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.75);
-    background-color: rgb(0, 0, 0, 0.5);
-    margin: 1rem auto;
-    width: 90%;
-    padding: 0 1rem 0 1rem;
+    background-color: rgb(10, 10, 10);
+    text-align: left;
+    margin: 3% auto;
+    width: 95%;
+    padding: 3%;
     max-height: 20vw;
     overflow-y: auto;
 }
@@ -562,7 +561,7 @@ body {
     background-color: rgb(0, 0, 0);
     max-width: 100%;
     margin: 0 auto;
-    padding: 0.5% 0;
+    padding: 0;
     filter: blur(0px);
     text-align: left;
     opacity: 100%;
@@ -575,7 +574,7 @@ body {
     background-color: rgb(0, 0, 0);
     max-width: 100%;
     margin: 0 auto;
-    padding: 0.5% 0;
+    padding: 0;
     outline-width: 0.125rem;
     filter: blur(0px);
     text-align: left;
@@ -589,7 +588,7 @@ body {
     background-color: rgb(0, 0, 0);
     max-width: 100%;
     margin: 0 auto;
-    padding: 0.5% 0;
+    padding: 0;
     outline-width: 0.125rem;
     filter: blur(0px);
     text-align: left;
@@ -603,7 +602,7 @@ body {
     background-color: rgb(0, 0, 0);
     max-width: 100%;
     margin: 0 auto;
-    padding: 0.5% 0;
+    padding: 0;
     outline-width: 0.125rem;
     filter: blur(0px);
     text-align: left;
@@ -617,7 +616,7 @@ body {
     background-color: rgb(0, 0, 0);
     max-width: 100%;
     margin: 0 auto;
-    padding: 0.5% 0;
+    padding: 0;
     outline-width: 0.125rem;
     filter: blur(0px);
     text-align: left;
@@ -733,14 +732,13 @@ body {
     align-content: center;
     flex-direction: column;
     margin: 0 auto;
-    margin-right: 2rem;
     width: 100%;
 }
 
 .section-content iframe {
     width: 100%;
     aspect-ratio: 16/9;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     border: none;
 }
 
@@ -795,13 +793,19 @@ body {
 }
 
 .digital-box img {
-    max-height: clamp(8rem, 10vw, 10rem);
+    max-height: clamp(10rem, 10vw, 15rem);
 }
 
 .digital-box iframe {
-    margin: 0 auto;
+    margin: clamp(1px, 0.5vw, 2px);
     max-width: clamp(5rem, 10vw, 8rem);
     aspect-ratio: 9/16;
+    transition: all 0.25s;
+}
+
+.digital-box iframe:hover {
+    cursor: pointer;
+    transform: scale(0.98);
 }
 
 .image-box img:hover {
@@ -818,73 +822,57 @@ body {
 
 .contact-form {
     display: flex;
-    margin: 0 auto;
-    width: 100%;
     flex-direction: column;
-    gap: 10%;
 }
 
-.form-item {
-    position: relative;
+.contact-input {
     width: 100%;
-}
-
-.form-item input,
-.form-item textarea {
-    width: 100%;
-    padding: 0.5rem;
+    height: 5vw;
+    margin: 6% auto;
     border: none;
-    border-bottom: 2px solid rgb(255, 255, 255);
-    color: white;
-    background: transparent;
-    font-size: clamp(1rem 1vw 5rem);
+    border-bottom: 1px solid white;
     outline: none;
-    resize: none;
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.form-item label {
+.contact-form textarea {
     width: 100%;
-    text-align: left;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: clamp(1rem 1vw 5rem);
-    color: rgb(255, 255, 255);
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.form-item:has(textarea) label {
-    top: 75%;
-}
-
-.form-item input:focus+label,
-.form-item textarea:focus+label,
-.form-item input:not(:placeholder-shown)+label,
-.form-item textarea:not(:placeholder-shown)+label {
-    top: -10px;
-    font-size: clamp(0.5rem 1vw 5rem);
+    height: 10vw;
+    font-size: clamp(0.5rem, 1vw, 2rem);
+    font-weight: 300;
+    font: inherit;
     color: white;
 }
 
-.form-button {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+.contact-input::placeholder {
+    font-size: clamp(0.5rem, 1vw, 2rem);
+    font-weight: 300;
+    color: white;
+}
+
+.contact-form input {
+    font-size: clamp(0.5rem, 1vw, 2rem);
+    font-weight: 300;
+    font: inherit;
+    color: white;
+}
+
+.contact-form button {
+    text-align: center;
+    max-width: 50%;
+    padding: 3%;
     border: none;
-    padding: 0.5rem;
+    background-color: white;
     border-radius: 5px;
-    font-size: clamp(1rem 2vw 5rem);
+    font-size: clamp(1rem, 1vw, 3rem);
+    font: inherit;
+    font-weight: 400;
+    transition: all 0.25s;
+}
+
+.contact-form button:hover {
     cursor: pointer;
-    transition: background 0.3s;
-}
-
-.form-button:hover {
-    background-color: goldenrod;
-    color: white;
-}
-
-.form-button:active {
-    background-color: goldenrod;
+    scale: 0.9;
 }
 
 .socials-container {
@@ -1081,7 +1069,7 @@ footer img {
     }
 
     .full-image-box img {
-        max-height: 70vw;
+        max-height: 45vw;
     }
 
     .gallery-arrow-left-full,
