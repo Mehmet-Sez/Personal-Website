@@ -17,14 +17,14 @@
 
 
   <div class="full-image-wrap" id="fullImageWrap">
-      <div class="full-image-box" id="fullImageBox">
-        <div class="full-image-container">
-          <img id="fullImage" src="">
-        </div>
-        <div class="close-box">
-          <span class="close" onclick="closeFullImage()">Close</span>
-        </div>
+    <div class="full-image-box" id="fullImageBox">
+      <div class="full-image-container">
+        <img id="fullImage" src="">
       </div>
+      <div class="close-box">
+        <span class="close" onclick="closeFullImage()">Close</span>
+      </div>
+    </div>
   </div>
 
   <div class="header-wrap">
@@ -64,10 +64,10 @@
   <nav class="menu" id="menu">
     <button class="close-btn" id="closeBtn"></button>
     <div class="menu-items">
-      <a href="#" class="menu-item active" id="photographyMenuButton" onclick="openPhotographySection()">Photography</a>
+      <a href="#" class="menu-item active" id="aboutMenuButton" onclick="openAboutSection()">Home</a>
+      <a href="#" class="menu-item" id="photographyMenuButton" onclick="openPhotographySection()">Photography</a>
       <a href="#" class="menu-item" id="filmMenuButton" onclick="openFilmSection()">Film</a>
       <a href="#" class="menu-item" id="digitalMenuButton" onclick="openDigitalSection()">Digital</a>
-      <a href="#" class="menu-item" id="aboutMenuButton" onclick="openAboutSection()">About</a>
       <a href="#" class="menu-item" id="contactsMenuButton" onclick="openContactsSection()">Contact</a>
     </div>
     <div class="header-links-box menu-contacts">
@@ -106,14 +106,108 @@
     </div>
 
     <div class="section-bar">
-      <p><button class="section-button active" id="photographySectionButton"
+      <p><button class="section-button active" id="aboutSectionButton" onclick="openAboutSection()">Home</button></p>
+      <p><button class="section-button" id="photographySectionButton"
           onclick="openPhotographySection()">Photography</button></p>
       <p><button class="section-button" id="filmSectionButton" onclick="openFilmSection()">Film</button></p>
       <p><button class="section-button" id="digitalSectionButton" onclick="openDigitalSection()">Digital</button></p>
-      <p><button class="section-button" id="aboutSectionButton" onclick="openAboutSection()">About</button></p>
       <p><button class="section-button" id="contactsSectionButton" onclick="openContactsSection()">Contacts</button>
       </p>
     </div>
+
+
+
+
+
+    <!--About Section DIV-->
+    <div class="about-section" id="aboutSection">
+
+      <h1 class="section-title">ABOUT</h1>
+
+      <div class="section-background">
+        <div class="category-box">
+          <h1>A MULTIMEDIA DESIGNER</h1>
+          <h2>Explore what I have to offer.</h2>
+        </div>
+
+        <hr class="category-line">
+
+        <div class="section-box">
+          <div class="section-content">
+            <div class="image-box digital-box">
+              <iframe class="section-content" src="https://youtube.com/embed/UmzlwPlz628?si=v7GzybpyjglGlLwT">
+              </iframe>
+              <img class="image" id="0" src="Images/Digital/Posters/Land Rover Defender Poster-min.jpg" alt=""
+                onclick="openFullImage(this)">
+              <img class="image" id="1" src="Images/Photography/Portrait/Portrait-4-min.jpg" alt=""
+                onclick="openFullImage(this)">
+              <img class="image" id="2" src="Images/Photography/Portrait/compressed-Portrait-12.jpg" alt=""
+                onclick="openFullImage(this)">
+              <img class="image" id="3" src="Images/Digital/Product Advertising/Cologne-Bottle-2.jpg" alt=""
+                onclick="openFullImage(this)">
+              <iframe class="section-content" src="https://youtube.com/embed/lbRWK_94bns?si=sEtGuR774_zUv9ki">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="scroll-box">
+            <p>I am Mehmet Sezer, a multimedia designer. Cinematic photography, film production, graphic illustration,
+              UI/UX and other deliverables are what I specialize in. I have experience in digital brand advertising and
+              marketing design, event and portrait photography, film and commercial production. I am here to turn your
+              visions into reality. Let me help you see through a different lens.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- BIOGRAPHY -->
+      <div class="section-couple">
+        <div class="section-background">
+          <div class="category-box">
+            <h1>BIOGRAPHY</h1>
+            <h2>An insight into my personal processes that I use for design.</h2>
+          </div>
+
+          <hr class="category-line">
+
+          <div class="section-box">
+            <div class="scroll-box">
+              <p>Hi! I am Mehmet Sezer, a multimedia designer. Cinematic photography, film production, graphic
+                illustration,
+                UI/UX and other deliverables are what I specialize in.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHILOSOPHY -->
+        <div class="section-background">
+          <div class="category-box">
+            <h1>PHILOSOPHY OF CREATION</h1>
+            <h2>An insight into my personal processes that I use for design.</h2>
+          </div>
+
+          <hr class="category-line">
+
+          <div class="section-box">
+            <div class="scroll-box">
+              <p>Real world happenings serve as an influence for every creative endeavor. Film, photo, paint, and other
+                forms of artistic media all embody a sense of realism, as nothing is truly created through the mind
+                alone.
+                Sensory inputs that one feels are articulated and combined to generate the masterpieces we see on a
+                daily
+                basis. No one can create a new color that doesn’t already exist. We simply blend the colors together to
+                create new noise.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
 
     <!--Photography Section DIV-->
     <div class="photography-section" id="photographySection">
@@ -415,7 +509,7 @@
 
           <div class="section-box">
             <div class="section-content">
-              <div class="image-box digital-box">
+              <div class="image-box digital-box yt-short">
                 <iframe class="section-content" src="https://youtube.com/embed/_BJN6m4VvRQ?si=tCi5qxHB5isDZFpZ">
                 </iframe>
                 <img class="image" id="0" src="Images/Digital/Posters/F-14 Poster Static Final-min.jpg" alt=""
@@ -513,7 +607,7 @@
 
           <div class="section-box">
             <div class="section-content">
-              <div class="image-box digital-box">
+              <div class="image-box digital-box yt-short">
                 <iframe class="section-content" src="https://youtube.com/embed/feqzic1Sgas?si=CRZPVt9gpECRQuPU">
                 </iframe>
                 <iframe class="section-content" src="https://youtube.com/embed/78SHBi2jI48?si=2cq3oBq9VXyhsW4-">
@@ -528,53 +622,6 @@
               </p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-    <!--About Section DIV-->
-    <div class="about-section" id="aboutSection">
-
-      <h1 class="section-title">ABOUT</h1>
-
-      <!-- BIOGRAPHY -->
-      <div class="section-background">
-        <div class="section-box">
-          <div class="section-content">
-            <div class="image-box digital-box">
-              <img src="Compressed Images/Headshot Profile-min.jpg" alt="">
-            </div>
-          </div>
-          <p>Hi! I am Mehmet Sezer, a multimedia designer. Cinematic photography, film production, graphic
-            illustration,
-            UI/UX and other deliverables are what I specialize in.</p>
-        </div>
-      </div>
-
-      <!-- PHILOSOPHY -->
-      <div class="section-background">
-        <div class="category-box">
-          <h1>PHILOSOPHY OF CREATION</h1>
-          <h2>An insight into my personal processes that I use for design.</h2>
-        </div>
-
-        <hr class="category-line">
-
-        <div class="section-box">
-          <p>Real world happenings serve as an influence for every creative endeavor. Film, photo, paint, and other
-            forms of artistic media all embody a sense of realism, as nothing is truly created through the mind alone.
-            Sensory inputs that one feels are articulated and combined to generate the masterpieces we see on a daily
-            basis. No one can create a new color that doesn’t already exist. We simply blend the colors together to
-            create new noise.</p>
         </div>
       </div>
     </div>

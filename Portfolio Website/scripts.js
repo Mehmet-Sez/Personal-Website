@@ -185,8 +185,8 @@ function closeFullImage() {
 // SECTION FUNCTIONS
 
 function openPhotographySection() {
-    if (currentSection != 0) {
-        currentSection = 0;
+    if (currentSection != 3) {
+        currentSection = 3;
         photographySection.style.display = "block";
         filmSection.style.display = "none";
         digitalSection.style.display = "none";
@@ -233,8 +233,8 @@ function openDigitalSection() {
 }
 
 function openAboutSection() {
-    if (currentSection != 3) {
-        currentSection = 3;
+    if (currentSection != 0) {
+        currentSection = 0;
         photographySection.style.display = "none";
         filmSection.style.display = "none";
         digitalSection.style.display = "none";
