@@ -20,28 +20,6 @@ let headerImageCover = document.getElementById("headerImageCover");
 let currentHeaderIndex = 0;
 let currentHeaderImage = headerImageCover.getElementsByTagName('img')[currentHeaderIndex];
 
-// document.querySelectorAll('.form-item input, .form-item textarea').forEach(input => {
-//     const label = input.parentElement.querySelector('label');
-
-//     input.addEventListener('focus', () => {
-//         label.style.top = '-10px';
-//         label.style.fontSize = 'clamp(0.25rem 5vw 3rem)';
-//         label.style.color = 'white';
-//     });
-
-//     input.addEventListener('blur', () => {
-//         if (input.value.trim() === '') {
-//             if (input.tagName.toLowerCase() === 'textarea') {
-//                 label.style.top = '75%';
-//             } else {
-//                 label.style.top = '50%';
-//             }
-//             label.style.fontSize = 'clamp(0.5rem 5vw 5rem)';
-//             label.style.color = 'white';
-//         }
-//     });
-// });
-
 // Section Variables
 let sectionButtons = document.getElementById("sectionButon");
 
@@ -168,22 +146,17 @@ function openFullImage(div) {
     fullImageWrap.style.display = "flex";
     fullImageWrap.style.transition = "all 1s";
     fullImage.src = pic.src;
-    header.style.filter = "blur(5px)";
-    contentBox.style.filter = "blur(5px)";
     html.style.overflowY = "hidden";
 }
 
 function closeFullImage() {
     fullImageWrap.style.display = "none";
-    header.style.filter = "blur(0px)";
-    contentBox.style.filter = "blur(0px)";
     html.style.overflowY = "scroll";
 }
 
 
 
 // SECTION FUNCTIONS
-
 function openPhotographySection() {
     if (currentSection != 3) {
         currentSection = 3;
@@ -263,3 +236,56 @@ function openContactsSection() {
         contactsSectionButton.className = contactsSectionButton.className += " active";
     }
 }
+
+// CONTACT FORM FUNCTIONS
+let form = document.getElementById("form");
+let result = document.getElementById("result");
+let contactInnerBox = document.getElementById("contactInnerBox");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    form.style.display = "none";
+    result.style.display = "flex";
+    result.innerHTML = "Please wait...";
+
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: json,
+    })
+        .then(async (response) => {
+            let json = await response.json();
+            setTimeout(() => {
+                if (response.status == 200) {
+                    result.style.display = "flex";
+                    result.innerHTML = "MESSAGE SENT!";
+                    form.style.display = "none";
+
+                } else {
+                    console.log(response);
+                    result.style.display = "flex";
+                    result.innerHTML = "MESSAGE SENT!";
+                    form.style.display = "none";
+                }
+            }, 2500);
+        })
+        .catch((error) => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function () {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+                form.style.display = "flex";
+            }, 5000);
+        });
+});

@@ -9,8 +9,7 @@
     rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Mehmet S. Design</title>
-  <link rel="icon" type="image/x-icon" href="/Personal Logo Transparent.png">
+  <title> Design Portfolio Website </title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -107,9 +106,9 @@
     </div>
 
     <div class="section-bar">
-      <p><button class="section-button active" id="aboutSectionButton" onclick="openAboutSection()">Home</button></p>
-      <p><button class="section-button" id="photographySectionButton"
-          onclick="openPhotographySection()">Photography</button></p>
+      <p><button class="section-button" id="aboutSectionButton" onclick="openAboutSection()">Home</button></p>
+      <p><a href="works.html"><button class="section-button active" id="photographySectionButton"
+            onclick="openPhotographySection()">Photography</button></a></p>
       <p><button class="section-button" id="filmSectionButton" onclick="openFilmSection()">Film</button></p>
       <p><button class="section-button" id="digitalSectionButton" onclick="openDigitalSection()">Digital</button></p>
       <p><button class="section-button" id="contactsSectionButton" onclick="openContactsSection()">Contacts</button>
@@ -654,25 +653,21 @@
           <div class="section-content">
             <h1>SEND A CUSTOM MESSAGE</h1>
             <div class="contact-box">
-              <div class="contact-box-inner" id="contactInnerBox">
-                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="form">
-                  <input type="hidden" name="access_key" value="dec6d72b-5d4d-4633-92e8-4f1d53b7a202">
-                  <input type="hidden" name="subject" value="NEW MESSAGE FROM PORTFOLIO WEBSITE">
-                  <h1>First Name</h1>
-                  <input type="text" name="name" placeholder="" class="contact-input" required>
-                  <h1>Last Name</h1>
-                  <input type="text" name="name" placeholder="" class="contact-input" required>
-                  <h1>Email</h1>
-                  <input type="email" name="email" placeholder="" class="contact-input" required>
-                  <h1>Message</h1>
-                  <textarea name="message" placeholder="" class="contact-input" required></textarea>
-                  <button type="submit">Send</button>
-                  <input type="hidden" name="redirect" value="https://mehmetsdesign.com/">
-                </form>
-                <div class="submit-message" id="result">
-                  <p></p>
-                </div>
-              </div>
+              <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="dec6d72b-5d4d-4633-92e8-4f1d53b7a202">
+                <h1>First Name</h1>
+                <input type="text" name="name" placeholder="" class="contact-input" required>
+                <h1>Last Name</h1>
+                <input type="text" name="name" placeholder="" class="contact-input" required>
+                <h1>Email</h1>
+                <input type="email" name="email" placeholder="" class="contact-input" required>
+                <h1>Subject</h1>
+                <input type="text" name="name" placeholder="" class="contact-input" required>
+                <h1>Message</h1>
+                <textarea name="message" placeholder="" class="contact-input" required></textarea>
+                <button type="submit">Send</button>
+                <input type="hidden" name="redirect" value="https://mehmetsdesign.com/">
+              </form>
             </div>
           </div>
 
