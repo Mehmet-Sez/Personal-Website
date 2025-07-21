@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     transition: 0.5s;
     position: relative;
 }
@@ -29,7 +29,6 @@ body {
     z-index: 8;
     margin: 0 auto;
     width: 100vw;
-    height: 2.5vw;
     padding: 0;
     background-color: #000;
     border-bottom: solid 0.125rem white;
@@ -43,7 +42,7 @@ body {
 
 .header-title-box {
     display: flex;
-    margin: 0;
+    margin: 0.5vw 0;
     margin-left: 2rem;
     justify-content: left;
     align-items: end;
@@ -58,15 +57,16 @@ body {
 .header-title-box h2 {
     color: goldenrod;
     font-weight: 200;
-    margin-left: 1rem;
+    margin-left: 1vw;
     font-size: clamp(0.75rem, 1vw, 1rem);
 }
 
 .header-links-box {
     display: flex;
+    gap: 0.5vw;
     width: 6vw;
     margin: 0;
-    margin-right: 2rem;
+    margin-right: 1vw;
     justify-content: right;
     align-items: center;
 }
@@ -85,7 +85,7 @@ body {
     color: white;
     transition: 200ms;
     align-items: center;
-    width: 1.5vw;
+    width: 100%;
 }
 
 .NavSocialButtons img {
@@ -384,7 +384,7 @@ body {
     background-color: rgb(0, 0, 0);
     width: 100vw;
     margin: 0 auto;
-    padding: 0.5% 0;
+    padding: 0;
     filter: blur(0px);
 }
 
@@ -651,30 +651,39 @@ body {
     position: relative;
     z-index: 8;
     display: flex;
-    max-width: 100%;
+    width: 100vw;
     margin: 0 auto;
-    margin-top: 1vw;
     height: 35vw;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .header-image-cover {
     display: flex;
     align-items: end;
     transition: all 1s;
+    height: 100%;
+    place-content: center;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin: 0 auto;
+}
+
+.header-image-cover::-webkit-scrollbar {
+    display: none;
 }
 
 .header-image-cover img {
     transition: all 1s;
+    margin: 0 auto;
     width: 100%;
-    overflow: hidden;
+    height: auto;
 }
 
 .header-image {
     transition: all 1s;
-    display: none;
+    display: block;
 }
 
 .active-header {
@@ -683,6 +692,7 @@ body {
 }
 
 .header-arrow {
+    z-index: 10;
     background-color: rgb(0, 0, 0);
     display: flex;
     padding: 0;
@@ -897,41 +907,38 @@ body {
 
 .socials-container {
     display: flex;
-    flex-direction: column;
     width: 100%;
     position: relative;
     margin: 0 auto;
-    margin-top: 4vw;
-    text-align: center;
-    justify-content: center;
+    text-align: left;
+    justify-content: left;
     place-items: center;
     place-content: center;
 }
 
-.ContactSocialButtons {
-    background-color: rgba(164, 21, 21, 0);
-    margin: 2vw;
-    align-items: center;
-    text-align: center;
-    border: none;
-    color: white;
-    transition: 200ms;
-    width: 3vw;
-}
-
-.ContactSocialButtons img {
-    width: 100%;
-}
-
-.ContactSocialButtons p {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
+.socials-container p {
+    margin: 0;
+    text-align: left;
     align-items: center;
     white-space: nowrap;
     font-size: clamp(0.5rem, 1vw, 2rem);
     font-weight: 200;
     padding: 0;
+}
+
+.ContactSocialButtons {
+    margin: 0;
+    background-color: rgba(164, 21, 21, 0);
+    align-items: center;
+    text-align: left;
+    border: none;
+    color: white;
+    transition: 200ms;
+    width: 5vw;
+}
+
+.ContactSocialButtons img {
+    width: 100%;
 }
 
 .ContactSocialButtons:hover {
@@ -968,6 +975,7 @@ body {
 
 footer {
     display: flex;
+    margin: 0 auto;
     color: ivory;
     background-color: rgba(0, 0, 0);
     width: 100vw;
@@ -1024,15 +1032,11 @@ footer img {
 
     .header-links-box {
         margin-right: 0.5rem;
-        width: 6rem;
+        width: 4rem;
     }
 
-    .NavSocialButtons {
-        width: 1.5rem;
-    }
-
-    .NavSocialButtons img {
-        width: 100%;
+    .header-image-box {
+        height: 70vw;
     }
 
     .section-couple .section-background {
@@ -1140,10 +1144,6 @@ footer img {
     .header {
         margin: 0 auto;
         height: 10vw;
-    }
-
-    .header-image-box {
-        height: 50vw;
     }
 
     .header-title-box {
