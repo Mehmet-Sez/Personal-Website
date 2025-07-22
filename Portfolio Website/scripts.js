@@ -169,56 +169,15 @@ function closeFullImage() {
 
 
 // SECTION FUNCTIONS
-function openPhotographySection() {
-    if (currentSection != 3) {
-        currentSection = 3;
-        photographySection.style.display = "block";
-        filmSection.style.display = "none";
-        digitalSection.style.display = "none";
-        aboutSection.style.display = "none";
-        contactsSection.style.display = "none";
-        photographySectionButton.className = photographySectionButton.className += " active";
-        filmSectionButton.className = filmSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
-        digitalSectionButton.className = digitalSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
-        aboutSectionButton.className = aboutSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
-        contactsSectionButton.className = contactsSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
-    }
-}
-
-function openFilmSection() {
-    if (currentSection != 1) {
-        currentSection = 1;
-        photographySection.style.display = "none";
-        filmSection.style.display = "block";
-        digitalSection.style.display = "none";
-        aboutSection.style.display = "none";
-        contactsSection.style.display = "none";
-        photographySectionButton.className = photographySectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
-        filmSectionButton.className = filmSectionButton.className += " active";
-        digitalSectionButton.className = digitalSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
-        aboutSectionButton.className = aboutSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
-        contactsSectionButton.className = contactsSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
-    }
-}
-
-function openDigitalSection() {
-    if (currentSection != 2) {
-        currentSection = 2;
-        photographySection.style.display = "none";
-        filmSection.style.display = "none";
-        digitalSection.style.display = "block";
-        aboutSection.style.display = "none";
-        contactsSection.style.display = "none";
-        photographySectionButton.className = photographySectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
-        filmSectionButton.className = filmSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
-        digitalSectionButton.className = digitalSectionButton.className += " active";
-        aboutSectionButton.className = aboutSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
-        contactsSectionButton.className = contactsSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
-    }
-}
-
 function openAboutSection() {
     if (currentSection != 0) {
+        currentHeaderIndex = 0;
+        currentHeaderImage = headerImageCover.getElementsByTagName('img')[currentHeaderIndex];
+        currentHeaderImage.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+        });
         currentSection = 0;
         photographySection.style.display = "none";
         filmSection.style.display = "none";
@@ -233,8 +192,84 @@ function openAboutSection() {
     }
 }
 
+function openPhotographySection() {
+    if (currentSection != 1) {
+        currentHeaderIndex = 1;
+        currentHeaderImage = headerImageCover.getElementsByTagName('img')[currentHeaderIndex];
+        currentHeaderImage.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+        });
+        currentSection = 1;
+        photographySection.style.display = "block";
+        filmSection.style.display = "none";
+        digitalSection.style.display = "none";
+        aboutSection.style.display = "none";
+        contactsSection.style.display = "none";
+        photographySectionButton.className = photographySectionButton.className += " active";
+        filmSectionButton.className = filmSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+        digitalSectionButton.className = digitalSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+        aboutSectionButton.className = aboutSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+        contactsSectionButton.className = contactsSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+    }
+}
+
+function openFilmSection() {
+    if (currentSection != 2) {
+        currentHeaderIndex = 2;
+        currentHeaderImage = headerImageCover.getElementsByTagName('img')[currentHeaderIndex];
+        currentHeaderImage.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+        });
+        currentSection = 2;
+        photographySection.style.display = "none";
+        filmSection.style.display = "block";
+        digitalSection.style.display = "none";
+        aboutSection.style.display = "none";
+        contactsSection.style.display = "none";
+        photographySectionButton.className = photographySectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+        filmSectionButton.className = filmSectionButton.className += " active";
+        digitalSectionButton.className = digitalSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+        aboutSectionButton.className = aboutSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+        contactsSectionButton.className = contactsSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+    }
+}
+
+function openDigitalSection() {
+    if (currentSection != 3) {
+        currentHeaderIndex = 3;
+        currentHeaderImage = headerImageCover.getElementsByTagName('img')[currentHeaderIndex];
+        currentHeaderImage.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+        });
+        currentSection = 3;
+        photographySection.style.display = "none";
+        filmSection.style.display = "none";
+        digitalSection.style.display = "block";
+        aboutSection.style.display = "none";
+        contactsSection.style.display = "none";
+        photographySectionButton.className = photographySectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+        filmSectionButton.className = filmSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+        digitalSectionButton.className = digitalSectionButton.className += " active";
+        aboutSectionButton.className = aboutSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+        contactsSectionButton.className = contactsSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+    }
+}
+
 function openContactsSection() {
     if (currentSection != 4) {
+        currentHeaderIndex = 4;
+        currentHeaderImage = headerImageCover.getElementsByTagName('img')[currentHeaderIndex];
+        currentHeaderImage.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+        });
         currentSection = 4;
         photographySection.style.display = "none";
         filmSection.style.display = "none"
