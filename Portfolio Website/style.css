@@ -653,20 +653,18 @@ body {
     display: flex;
     width: 100vw;
     margin: 0 auto;
-    height: 35vw;
-    justify-content: center;
+    height: 30vw;
+    justify-content: space-between;
     align-items: center;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .header-image-cover {
     display: flex;
-    align-items: end;
+    align-items: center;
     transition: all 1s;
-    height: 100%;
-    place-content: center;
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: hidden;
     margin: 0 auto;
 }
 
@@ -676,17 +674,15 @@ body {
 
 .header-image-cover img {
     transition: all 1s;
-    margin: 0 auto;
+    margin: 0;
+    text-align: left;
+    place-content: left;
+    place-items: left;
     width: 100%;
     height: auto;
 }
 
 .header-image {
-    transition: all 1s;
-    display: block;
-}
-
-.active-header {
     transition: all 1s;
     display: block;
 }

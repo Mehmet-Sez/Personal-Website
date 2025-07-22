@@ -84,28 +84,40 @@ document.addEventListener('keydown', (e) => {
 
 
 function forwardHeaderArrow() {
-    currentHeaderImage.className = currentHeaderImage.className.replace(/(?:^|\s)active-header(?!\S)/g, '');
-    if (currentHeaderIndex > headerImageArray.length) {
+    if (currentHeaderIndex > headerImageArray.length + 1) {
         currentHeaderIndex = 0;
         currentHeaderImage = headerImageCover.getElementsByTagName('img')[currentHeaderIndex];
-        currentHeaderImage.className = currentHeaderImage.className += " active-header";
+        currentHeaderImage.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+        });
     } else {
         currentHeaderIndex += 1;
         currentHeaderImage = headerImageCover.getElementsByTagName('img')[currentHeaderIndex];
-        currentHeaderImage.className = currentHeaderImage.className += " active-header";
+        currentHeaderImage.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+        });
     }
 }
 
 function backwardHeaderArrow() {
-    currentHeaderImage.className = currentHeaderImage.className.replace(/(?:^|\s)active-header(?!\S)/g, '');
     if (currentHeaderIndex === 0) {
-        currentHeaderIndex = (headerImageArray.length + 1);
+        currentHeaderIndex = (headerImageArray.length + 2);
         currentHeaderImage = headerImageCover.getElementsByTagName('img')[currentHeaderIndex];
-        currentHeaderImage.className = currentHeaderImage.className += " active-header";
+        currentHeaderImage.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
     } else {
         currentHeaderIndex -= 1;
         currentHeaderImage = headerImageCover.getElementsByTagName('img')[currentHeaderIndex];
-        currentHeaderImage.className = currentHeaderImage.className += " active-header";
+        currentHeaderImage.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
     }
 }
 
