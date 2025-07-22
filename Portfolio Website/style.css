@@ -824,12 +824,18 @@ body {
     margin-top: 0;
 }
 
+.contact-box .socials-container:first-of-type {
+    margin-top: 0;
+}
+
 .contact-box-inner {
     width: 100%;
     display: flex;
     margin: 2vw;
     height: 30vw;
     place-content: center;
+    place-items: center;
+    text-align: center;
     flex-direction: column;
     background-color: rgb(10, 10, 10);
     padding: 1.5vw;
@@ -898,7 +904,7 @@ body {
 
 .contact-form button:hover {
     cursor: pointer;
-    scale: 0.9;
+    background-color: rgb(193, 193, 193);
 }
 
 .socials-container {
@@ -906,14 +912,16 @@ body {
     width: 100%;
     position: relative;
     margin: 0 auto;
+    margin-top: 2vw;
     text-align: left;
-    justify-content: left;
-    place-items: center;
-    place-content: center;
+    align-items: center;
+    transition: all 0.25s;
 }
 
 .socials-container p {
+    /* display: none; */
     margin: 0;
+    margin-left: 1vw;
     text-align: left;
     align-items: center;
     white-space: nowrap;
@@ -922,15 +930,23 @@ body {
     padding: 0;
 }
 
+.socials-container:hover {
+    cursor: pointer;
+    color: #000;
+    scale: 0.98;
+}
+
 .ContactSocialButtons {
     margin: 0;
     background-color: rgba(164, 21, 21, 0);
     align-items: center;
     text-align: left;
+    place-content: left;
+    place-items: left;
     border: none;
     color: white;
     transition: 200ms;
-    width: 5vw;
+    width: 4vw;
 }
 
 .ContactSocialButtons img {
@@ -939,8 +955,6 @@ body {
 
 .ContactSocialButtons:hover {
     cursor: pointer;
-    color: #000;
-    scale: 0.95;
 }
 
 /* .contact-social {
