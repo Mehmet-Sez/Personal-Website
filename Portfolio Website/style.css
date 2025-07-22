@@ -687,10 +687,7 @@ body {
 
 .header-image-cover img {
     transition: all 1s;
-    margin: 0;
-    text-align: left;
-    place-content: left;
-    place-items: left;
+    margin: 0 auto;
     width: 100%;
     height: auto;
 }
@@ -1061,7 +1058,7 @@ footer img {
     }
 
     .header-image-box {
-        height: 70vw;
+        height: 56vw;
     }
 
     .section-background {
@@ -1105,11 +1102,11 @@ footer img {
     }
 
     .section-couple .section-content iframe {
-    width: 100%;
-    aspect-ratio: 16/9;
-    margin: 0 auto;
-    border: none;
-}
+        width: 100%;
+        aspect-ratio: 16/9;
+        margin: 0 auto;
+        border: none;
+    }
 
     .scroll-box {
         margin: 0.5vw auto;
