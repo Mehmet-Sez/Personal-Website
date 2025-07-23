@@ -18,7 +18,7 @@ let imageDateNew;
 let headerImageBox = document.getElementById("headerImageBox");
 let headerImageCover = document.getElementById("headerImageCover");
 let currentHeaderIndex = 0;
-let currentHeaderImage = headerImageCover.getElementsByTagName('img')[currentHeaderIndex];
+let currentHeaderImage;
 
 // Section Variables
 let sectionButtons = document.getElementById("sectionButon");

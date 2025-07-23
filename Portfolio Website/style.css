@@ -676,8 +676,7 @@ body {
     display: flex;
     align-items: center;
     transition: all 1s;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0 auto;
 }
 
