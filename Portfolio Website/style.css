@@ -420,6 +420,10 @@ body {
     border: none;
 }
 
+.section-couple .image-box {
+    margin: 0 auto;
+}
+
 .section-background {
     max-width: 95%;
     display: flex;
@@ -478,9 +482,9 @@ body {
 
 .buffer-box {
     display: flex;
+    position: relative;
     flex-direction: column;
     text-align: center;
-    place-items: center;
     width: 25%;
     height: 100%;
     margin: auto;
@@ -779,6 +783,7 @@ body {
 .image-box {
     position: relative;
     margin: 0 auto;
+    margin-top: 1vw;
     padding: 0;
     display: flex;
     place-content: center;
@@ -817,18 +822,25 @@ body {
     transform: scale(0.98);
 }
 
+.contacts-section .section-box {
+    align-items: start;
+}
+
 .contact-box {
     width: 100%;
-    margin: 1rem auto;
+    margin: 1vw auto;
     padding: 0;
-    text-align: left;
+    place-content: center;
     place-items: center;
+    align-items: start;
 }
 
 .contact-box h1 {
     text-align: left;
     margin: 0;
     margin-top: 4vw;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+    font-weight: 400;
 }
 
 .contact-box h1:first-of-type {
@@ -841,14 +853,16 @@ body {
 
 .contact-box-inner {
     width: 100%;
+    position: relative;
     display: flex;
     margin: 2vw;
-    height: 30vw;
+    height: auto;
     place-content: center;
     place-items: center;
     text-align: center;
     flex-direction: column;
     background-color: rgb(10, 10, 10);
+    background-color: rgb(53, 53, 53);
     padding: 1.5vw;
 }
 
@@ -858,7 +872,9 @@ body {
     margin: 0;
     flex-direction: column;
     text-align: left;
-    font-size: clamp(0.5rem, 1vw, 2rem);
+    place-items: start;
+    place-content: start;
+    font-size: clamp(0.5rem, 1vw, 1rem);
     font-weight: 200;
     font: inherit;
     padding: 0;
@@ -867,6 +883,7 @@ body {
 
 .contact-input {
     width: 100%;
+    text-align: left;
     height: 2vw;
     margin: 0 auto;
     border: none;
@@ -877,7 +894,8 @@ body {
 
 .contact-form textarea {
     min-width: 100%;
-    height: 2vw;
+    resize: vertical;
+    min-height: 2vw;
     margin: 0 auto;
     font-size: clamp(0.5rem, 1vw, 2rem);
     font-weight: 300;
@@ -903,7 +921,7 @@ body {
     max-width: 50%;
     margin: 2vw auto;
     margin-bottom: 0;
-    padding: 3%;
+    padding: 1vw;
     border: none;
     background-color: white;
     border-radius: 5px;
@@ -920,24 +938,24 @@ body {
 
 .socials-container {
     display: flex;
+    border: 1px solid white;
     width: 100%;
     position: relative;
     margin: 0 auto;
     margin-top: 2vw;
-    text-align: left;
+    text-align: center;
     align-items: center;
     transition: all 0.25s;
 }
 
 .socials-container p {
-    /* display: none; */
     margin: 0;
     margin-left: 1vw;
-    text-align: left;
+    text-align: right;
     align-items: center;
     white-space: nowrap;
-    font-size: clamp(0.5rem, 1vw, 2rem);
-    font-weight: 200;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+    font-weight: 400;
     padding: 0;
 }
 
@@ -949,11 +967,10 @@ body {
 
 .ContactSocialButtons {
     margin: 0;
+    margin-left: 10vw;
     background-color: rgba(164, 21, 21, 0);
     align-items: center;
-    text-align: left;
-    place-content: left;
-    place-items: left;
+    text-align: center;
     border: none;
     color: white;
     transition: 200ms;
@@ -967,13 +984,6 @@ body {
 .ContactSocialButtons:hover {
     cursor: pointer;
 }
-
-/* .contact-social {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-} */
 
 .submit-message {
     display: none;
@@ -1129,7 +1139,7 @@ footer img {
     .section-content h1 {
         font-size: 0.9rem;
         margin: 0 auto;
-        margin-top: 0.5rem;
+        margin-top: 4vw;
         font-weight: 400;
     }
 
@@ -1148,12 +1158,54 @@ footer img {
     }
 
     .category-box h2 {
-        margin-top: 0rem;
+        margin-top: 0;
+        margin-bottom: 1vw;
+        font-size: 0.7rem;
     }
 
     .category-line {
         width: 100%;
         margin: 0 auto;
+    }
+
+    .contact-box {
+        margin: 0 auto;
+    }
+
+    .contact-box h1 {
+        margin-top: 6vw;
+        text-align: left;
+    }
+
+    .contact-box-inner {
+        min-height: 60vw;
+        padding: 1.5vw 3vw;
+    }
+
+    .contact-input {
+        height: 5vw;
+    }
+
+    .contact-form textarea {
+        min-height: 4vw;
+    }
+
+    .contact-form button {
+        padding: 1.5vw;
+    }
+
+    .socials-container {
+        margin-top: 5vw;
+    }
+
+    .socials-container p {
+        font-size: 0.7rem;
+    }
+
+    .ContactSocialButtons {
+        margin: 0;
+        margin-left: 20vw;
+        width: 7vw;
     }
 
     .image-grid {
@@ -1179,6 +1231,14 @@ footer img {
     .gallery-arrow-left-full,
     .gallery-arrow-right-full {
         padding: 0.5rem;
+    }
+
+    footer {
+        height: 15vw;
+    }
+
+    footer img {
+        width: 60vw;
     }
 }
 
@@ -1289,6 +1349,7 @@ footer img {
 
     .category-box h2 {
         font-size: 0.75rem;
+        margin-top: 1.5vw;
         color: white;
     }
 
@@ -1349,5 +1410,47 @@ footer img {
     .category-line {
         margin: 0.5rem auto;
         width: 100%;
+    }
+
+    .contact-box h1 {
+        margin: 4vw auto;
+        text-align: left;
+    }
+
+    .contact-box-inner {
+        min-height: 60vw;
+        padding: 4vw;
+    }
+
+    .contact-input {
+        height: 8vw;
+    }
+
+    .contact-form textarea {
+        min-height: 4vw;
+    }
+
+    .contact-form button {
+        padding: 1.5vw;
+    }
+
+    .socials-container {
+        text-align: center;
+        place-content: center;
+        place-items: center;
+        margin-top: 5vw;
+        border: none;
+    }
+
+    .socials-container p {
+        display: none;
+    }
+
+    .ContactSocialButtons {
+        place-content: center;
+        place-items: center;
+        margin: 0 auto;
+        margin-left: 45%;
+        width: 10vw;
     }
 }
