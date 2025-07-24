@@ -5,6 +5,8 @@ let fullImageWrap = document.getElementById("fullImageWrap");
 let galleryArrowLeftFull = document.getElementById("galleryArrowLeftFull");
 let galleryArrowRightFull = document.getElementById("galleryArrowRightFull");
 let fullImage = document.getElementById("fullImage");
+let fullVideoHorz = document.getElementById("fullVideoHorz");
+let fullVideoVert = document.getElementById("fullVideoVert");
 let contentBox = document.getElementById("contentBox");
 let html = document.getElementById("html");
 let body = document.getElementById("body");
@@ -12,6 +14,7 @@ let header = document.getElementById("header");
 let imageTitle = document.getElementById("imageTitle");
 let imageDate = document.getElementById("imageDate");
 let pic;
+let vid;
 let imageTitleNew;
 let imageDateNew;
 
@@ -151,6 +154,9 @@ function backwardArrow() {
 
 function openFullImage(div) {
     imageGallery(div.parentElement);
+    fullImageBox.getElementsByTagName('img')[0].style.display = "flex";
+    fullImageBox.getElementsByTagName('iframe')[0].style.display = "none";
+    fullImageBox.getElementsByTagName('iframe')[1].style.display = "none";
     currentImage = div;
     currentIndex = div.id;
     pic = div.parentElement.getElementsByClassName("image")[currentIndex];
@@ -162,8 +168,26 @@ function openFullImage(div) {
 }
 
 function closeFullImage() {
+    fullImageBox.getElementsByTagName('img')[0].style.display = "none";
+    fullImageBox.getElementsByTagName('iframe')[0].style.display = "none";
+    fullImageBox.getElementsByTagName('iframe')[1].style.display = "none";
+    fullVideoHorz.src = 0;
+    fullVideoVert.src = 0;
     fullImageWrap.style.display = "none";
     html.style.overflowY = "scroll";
+}
+
+function openFullVideo(div) {
+    if (div.classList.contains('horizontal')) {
+        fullImageBox.getElementsByTagName('iframe')[0].style.display = "flex";
+        fullVideoHorz.src = div.id;
+    } else {
+        fullImageBox.getElementsByTagName('iframe')[1].style.display = "flex";
+        fullVideoVert.src = div.id;
+    }
+    fullImageWrap.style.display = "flex";
+    fullImageWrap.style.transition = "all 1s";
+    html.style.overflowY = "hidden";
 }
 
 

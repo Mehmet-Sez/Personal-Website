@@ -337,11 +337,25 @@ body {
 }
 
 .full-image-box img {
+    display: none;
     background-color: #000;
     max-height: 35vw;
-    outline: solid;
-    outline-width: 0.15rem;
-    outline-color: none;
+    transition: 0.5s;
+}
+
+.fullVideoHorz {
+    display: none;
+    border: none;
+    width: 65vw;
+    aspect-ratio: 16/9;
+    transition: 0.5s;
+}
+
+.fullVideoVert {
+    display: none;
+    border: none;
+    width: 20vw;
+    aspect-ratio: 9/16;
     transition: 0.5s;
 }
 
@@ -689,6 +703,7 @@ body {
 }
 
 .header-image-cover img {
+    filter: grayscale(1);
     transition: all 1s;
     margin: 0 auto;
     width: 100%;
@@ -740,12 +755,12 @@ body {
     width: 100%;
 }
 
-.section-content iframe {
+/* .section-content iframe {
     width: 100%;
     aspect-ratio: 16/9;
     margin: 0 1vw;
     border: none;
-}
+} */
 
 .yt-short iframe {
     margin: 0 auto;
@@ -821,6 +836,13 @@ body {
     cursor: pointer;
     transform: scale(0.98);
 }
+
+/* .film-section img {
+    border: white;
+    width: 100%;
+    height: 100%;
+    margin: 0 1vw;
+} */
 
 .contacts-section .section-box {
     align-items: start;
