@@ -171,9 +171,9 @@ body {
     display: none;
     position: fixed;
     top: 0;
-    /* right: -100vw; */
     width: 100vw;
     height: 100vh;
+    justify-content: space-between;
     background: rgb(255, 255, 255);
     backdrop-filter: blur(20px);
     padding: 0;
@@ -245,14 +245,17 @@ body {
 }
 
 .name-banner {
+    position: relative;
+    place-content: end;
+    place-items: end;
     width: 80%;
     margin: 0 auto;
-    margin-top: -3rem;
+    bottom: 0;
 }
 
 .full-image-wrap {
     z-index: 11;
-    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(0, 0, 0, 0.75);
     border: none;
     display: none;
     margin: 0 auto;
@@ -424,7 +427,7 @@ body {
 }
 
 .section-couple .scroll-box {
-    margin-top: 0.5vw;
+    margin-top: 0;
 }
 
 .section-couple .section-content iframe {
@@ -436,6 +439,7 @@ body {
 
 .section-couple .image-box {
     margin: 0 auto;
+    margin-bottom: 1vw;
 }
 
 .section-background {
@@ -555,7 +559,7 @@ body {
 .section-box p {
     font-size: clamp(0.5rem, 1vw, 1.25rem);
     font-weight: 200;
-    margin: 0 auto;
+    margin: 1vw;
     color: white;
     line-height: 2vw;
 }
@@ -563,10 +567,9 @@ body {
 .scroll-box {
     background-color: rgb(10, 10, 10);
     text-align: left;
-    margin: 1vw auto;
+    margin: 1vw;
     width: 95%;
-    padding: 1.5vw;
-    padding-top: 0;
+    padding: 0;
     max-height: 20vw;
     overflow-y: auto;
 }
@@ -757,13 +760,6 @@ body {
     width: 100%;
 }
 
-.yt-short iframe {
-    margin: 0 auto;
-    text-align: center;
-    max-width: clamp(10rem, 20vw, 80rem);
-    aspect-ratio: 9/16;
-}
-
 .section-content h1 {
     font-size: clamp(0.5rem, 1vw, 2rem);
     color: white;
@@ -787,8 +783,9 @@ body {
 }
 
 .image-box {
+    max-width: 100%;
     position: relative;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     display: flex;
     place-content: center;
@@ -805,6 +802,7 @@ body {
 }
 
 .digital-box img {
+    width: auto;
     max-height: clamp(10rem, 10vw, 15rem);
 }
 
@@ -832,6 +830,7 @@ body {
     padding: 0;
     width: 100%;
     transition: all 0.25s;
+    z-index: 6;
 }
 
 .video-horz:hover {
@@ -844,11 +843,50 @@ body {
     padding: 0;
     width: 75%;
     transition: all 0.25s;
+    z-index: 6;
 }
 
 .video-vert:hover {
     cursor: pointer;
     transform: scale(0.98);
+}
+
+.video-cover {
+    margin: 0;
+    position: relative;
+    place-content: center;
+    place-items: center;
+    transition: all 0.25s;
+}
+
+.video-cover p {
+    z-index: 12;
+    width: 100%;
+    height: 100%;
+    place-content: center;
+    place-items: center;
+    position: absolute;
+    font-size: clamp(2rem, 4vw, 10rem);
+    font-weight: 600;
+    transition: all 0.25s;
+    pointer-events: none;
+}
+
+.video-cover:hover {
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+.video-cover p:hover {
+    color: rgb(119, 119, 119);
+}
+
+.digital-box .video-cover {
+    margin: clamp(1px, 0.5vw, 2px);
+}
+
+.digital-box .video-cover p {
+    font-size: clamp(0.5rem, 2vw, 6rem);
 }
 
 .contacts-section .section-box {
@@ -1131,11 +1169,13 @@ footer img {
     }
 
     .section-couple .scroll-box {
-        margin: 0.5vw auto;
+        margin: 0 auto;
+        margin-top: 2vw;
+        padding: 0.5rem;
     }
 
     .section-couple .section-content {
-        margin: 0 auto;
+        margin: 2vw auto;
     }
 
     .section-couple .section-content iframe {
@@ -1146,13 +1186,13 @@ footer img {
     }
 
     .scroll-box {
-        margin: 0.5vw auto;
+        margin: 0 auto;
+        padding: 0.5rem;
     }
 
     .section-box {
         flex-direction: column;
         margin: 0 auto;
-        margin-top: 2vw;
     }
 
     .section-box p {
@@ -1162,7 +1202,7 @@ footer img {
     }
 
     .section-content {
-        margin: 0vw auto;
+        margin: 2vw auto;
     }
 
     .section-content h1 {
@@ -1237,6 +1277,10 @@ footer img {
         width: 7vw;
     }
 
+    .section-couple .video-cover p, .video-cover p{
+        font-size: 5rem;
+    }
+
     .image-grid {
         grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
         grid-gap: 0.5rem;
@@ -1307,8 +1351,7 @@ footer img {
     .menu-contacts {
         display: flex;
         margin: 1rem auto;
-        margin-bottom: 0;
-        width: 50%;
+        width: 100%;
     }
 
     .menu-contacts img {
@@ -1358,7 +1401,7 @@ footer img {
         margin: 0.5vw auto;
         width: 90%;
         max-height: 25vh;
-        padding: 0 0.5rem 0 0.5rem 0;
+        padding: 0.5rem;
     }
 
     .section-title {
@@ -1444,6 +1487,10 @@ footer img {
     .contact-box h1 {
         margin: 4vw auto;
         text-align: left;
+    }
+
+    .section-couple .video-cover p, .video-cover p{
+        font-size: 2rem;
     }
 
     .contact-box-inner {
