@@ -323,7 +323,8 @@ body {
 .full-image-box {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
@@ -342,14 +343,16 @@ body {
 .full-image-box img {
     display: none;
     background-color: #000;
-    max-height: 35vw;
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: contain;
     transition: 0.5s;
 }
 
 .fullVideoHorz {
     display: none;
     border: none;
-    width: 65vw;
+    width: 70vw;
     aspect-ratio: 16/9;
     transition: 0.5s;
 }
@@ -357,7 +360,7 @@ body {
 .fullVideoVert {
     display: none;
     border: none;
-    width: 20vw;
+    height: 80vh;
     aspect-ratio: 9/16;
     transition: 0.5s;
 }
@@ -365,7 +368,8 @@ body {
 .fullEmbededVideo {
     display: none;
     border: none;
-    width: 30vw;
+    max-width: 80vw;
+    max-height: 80vh;
     transition: 0.5s;
 }
 
@@ -435,7 +439,7 @@ body {
 
 .section-couple .section-background {
     align-items: center;
-    max-width: 40%;
+    max-width: 45%;
 }
 
 .section-couple .section-box {
@@ -463,7 +467,8 @@ body {
     max-width: 95%;
     display: flex;
     flex-direction: column;
-    margin: 1vw auto;
+    margin: 0 auto;
+    margin-bottom: 3vw;
     justify-content: center;
     padding: 0;
     background-color: #000000;
@@ -576,20 +581,38 @@ body {
 
 .section-box p {
     font-size: clamp(0.5rem, 1vw, 1.25rem);
-    font-weight: 200;
+    font-weight: 500;
     margin: 1vw;
-    color: white;
+    color: rgb(0, 0, 0);
     line-height: 2vw;
 }
 
 .scroll-box {
-    background-color: rgb(34, 34, 34);
+    background-color: rgb(255, 255, 255);
     text-align: left;
     margin: 1vw auto;
     width: 100%;
     padding: 0;
     max-height: 20vw;
     overflow-y: auto;
+}
+
+.scroll-box p {
+    font-size: clamp(0.5rem, 1vw, 1.25rem);
+    font-weight: 500;
+    margin: 1vw;
+    color: rgb(0, 0, 0);
+    line-height: 2vw;
+}
+
+.section-content .scroll-box {
+    width: 80%;
+    text-align: center;
+}
+
+.section-label {
+    margin: 0 auto;
+    padding: 0;
 }
 
 .column {
@@ -792,12 +815,12 @@ body {
     font-size: clamp(1rem, 1vw, 3rem);
 }
 
-.section-content p {
-    font-size: clamp(0.5rem, 1vw, 1.25rem);
-    margin: 0 auto;
-    text-align: center;
-    line-height: 2.5rem;
-    font-weight: 200;
+.section-couple .section-row {
+    flex-direction: row;
+}
+
+.section-row {
+    flex-direction: row;
 }
 
 .image-box {
@@ -824,18 +847,36 @@ body {
     transform: scale(0.98);
 }
 
+.about-image img {
+    max-height: clamp(20rem, 25vw, 60rem);
+}
+
 .digital-box img {
     width: auto;
-    max-height: clamp(10rem, 10vw, 15rem);
+    max-height: clamp(5rem, 10vw, 15rem);
 }
 
 .digital-box video {
     border: none;
     width: auto;
-    height: clamp(15rem, 14vw, 40rem);
+    height: clamp(10rem, 14vw, 30rem);
     margin: clamp(1px, 0.5vw, 2px);
     padding: 0;
     transition: all 0.25s;
+}
+
+.section-row .digital-box img {
+    width: auto;
+    max-height: clamp(10rem, 25vw, 60rem);
+}
+
+.section-couple .section-row .digital-box img {
+    width: auto;
+    max-height: clamp(10rem, 15vw, 50rem);
+}
+
+.section-row .scroll-box {
+    max-height: 30vw;
 }
 
 .digital-box video:hover {
@@ -888,16 +929,18 @@ body {
     font-size: clamp(2rem, 4vw, 10rem);
     font-weight: 600;
     transition: all 0.25s;
+    color: rgb(255, 255, 255);
     pointer-events: none;
 }
 
 .video-cover:hover {
     cursor: pointer;
     transform: scale(0.98);
+    color: goldenrod;
 }
 
 .video-cover p:hover {
-    color: rgb(119, 119, 119);
+    color: goldenrod;
 }
 
 .digital-box .video-cover {
@@ -942,7 +985,7 @@ body {
     position: relative;
     display: flex;
     margin: 2vw;
-    height: auto;
+    min-height: 35vw;
     place-content: center;
     place-items: center;
     text-align: center;
@@ -1008,17 +1051,19 @@ body {
     margin-bottom: 0;
     padding: 1vw;
     border: none;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     font-size: clamp(1rem, 1vw, 3rem);
     font: inherit;
-    font-weight: 400;
+    font-weight: 600;
+    color: black;
     transition: all 0.25s;
 }
 
 .contact-form button:hover {
     cursor: pointer;
-    background-color: rgb(193, 193, 193);
+    background-color: goldenrod;
+    color: #000;
 }
 
 .socials-container {
@@ -1036,6 +1081,7 @@ body {
 .socials-container p {
     margin: 0;
     margin-left: 1vw;
+    color: white;
     text-align: right;
     align-items: center;
     white-space: nowrap;
@@ -1134,11 +1180,12 @@ footer img {
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
     .header-title-box {
-        margin-left: 0.5rem;
+        margin-left: 0.7rem;
     }
 
     .header-title-box h1 {
         font-size: clamp(1rem, 1vw, 1.5rem);
+        margin-top: 1vw;
     }
 
     .header-title-box h2 {
@@ -1147,7 +1194,8 @@ footer img {
     }
 
     .header-links-box {
-        margin-right: 0.5rem;
+        margin-top: 2vw;
+        margin-right: 0.7rem;
         width: 4rem;
     }
 
@@ -1155,11 +1203,26 @@ footer img {
         height: 56vw;
     }
 
+    .digital-box img {
+        width: auto;
+        max-height: clamp(5rem, 15vw, 10rem);
+    }
+
+    .about-image img {
+        max-height: clamp(20rem, 15vw, 30rem);
+    }
+
+    .scroll-box {
+        margin: 0 auto;
+        padding: 0.5rem;
+        margin-top: 0;
+    }
+
     .section-background {
         flex-direction: column;
         max-width: 90%;
         padding: 0;
-        margin: 3vw auto;
+        margin: 0 auto;
     }
 
     .section-couple {
@@ -1183,12 +1246,11 @@ footer img {
     .section-couple .section-box p {
         font-size: 0.6rem;
         line-height: 1.5rem;
-        color: white;
     }
 
     .section-couple .scroll-box {
         margin: 0 auto;
-        margin-top: 2vw;
+        margin-top: 0;
         padding: 0.5rem;
     }
 
@@ -1203,9 +1265,37 @@ footer img {
         border: none;
     }
 
-    .scroll-box {
-        margin: 0 auto;
-        padding: 0.5rem;
+    .section-row .scroll-box {
+        max-height: 80vw;
+    }
+
+    .section-row .digital-box img {
+        width: auto;
+        max-height: clamp(16rem, 25vw, 60rem);
+    }
+
+    .section-couple .section-row .digital-box img {
+        width: auto;
+        max-height: clamp(16rem, 15vw, 50rem);
+    }
+
+    .about-section .category-line {
+        margin-bottom: 2vw;
+    }
+
+    .photography-section .section-box {
+        margin-top: 1vw;
+        margin-bottom: 0;
+    }
+
+    .film-section .section-box {
+        margin-top: 1vw;
+        margin-bottom: 0;
+    }
+
+    .digital-section .section-box {
+        margin-top: 1vw;
+        margin-bottom: 0;
     }
 
     .section-box {
@@ -1216,7 +1306,6 @@ footer img {
     .section-box p {
         font-size: 0.6rem;
         line-height: 1.5rem;
-        color: white;
     }
 
     .section-content {
@@ -1235,6 +1324,14 @@ footer img {
         min-width: 100%;
     }
 
+    .section-couple .section-row {
+        flex-direction: row;
+    }
+
+    .section-row {
+        flex-direction: row;
+    }
+
     .category-box {
         text-align: center;
         width: 100%;
@@ -1246,13 +1343,13 @@ footer img {
 
     .category-box h2 {
         margin-top: 0;
-        margin-bottom: 1vw;
         font-size: 0.7rem;
     }
 
     .category-line {
         width: 100%;
         margin: 0 auto;
+        margin-top: 1vw;
     }
 
     .contact-box {
@@ -1266,19 +1363,21 @@ footer img {
 
     .contact-box-inner {
         min-height: 60vw;
-        padding: 1.5vw 3vw;
+        padding: 6vw;
     }
 
     .contact-input {
-        height: 5vw;
+        height: 8vw;
     }
 
     .contact-form textarea {
-        min-height: 4vw;
+        min-height: 2vw;
     }
 
     .contact-form button {
-        padding: 1.5vw;
+        padding: 1vw;
+        margin-top: 6vw;
+        width: 60%;
     }
 
     .socials-container {
@@ -1291,7 +1390,7 @@ footer img {
 
     .ContactSocialButtons {
         margin: 0;
-        margin-left: 20vw;
+        margin-left: clamp(5rem, 2vw, 25rem);
         width: 7vw;
     }
 
@@ -1311,13 +1410,20 @@ footer img {
     }
 
     .section-button {
-        font-size: clamp(0.4rem, 1.5vw, 1rem);
+        font-size: 0.6rem;
         padding: 0;
         margin: 0.25rem auto;
     }
 
-    .full-image-box img {
-        max-height: 45vw;
+    .fullVideoVert {
+        height: 50vh;
+    }
+
+    .close-box {
+        margin-top: 5vw;
+        margin-right: 5vw;
+        width: 2rem;
+        height: 2rem;
     }
 
     .gallery-arrow-left-full,
@@ -1401,6 +1507,10 @@ footer img {
         max-height: 8rem;
     }
 
+    .about-image img {
+        max-height: 15rem;
+    }
+
     .section-bar {
         display: none;
     }
@@ -1412,6 +1522,7 @@ footer img {
     .section-background {
         justify-content: center;
         margin-top: 0;
+        margin-bottom: 10vw;
         width: 85vw;
     }
 
@@ -1423,25 +1534,32 @@ footer img {
         padding: 0.5rem;
     }
 
+    .section-couple .section-row {
+        flex-direction: column;
+    }
+
+    .section-row {
+        flex-direction: column;
+    }
+
     .section-title {
         display: flex;
-        color: white;
+        color: goldenrod;
         font-size: 1.25rem;
         font-weight: 400;
         margin: 0.5rem auto;
-        margin-bottom: 0;
-        justify-content: center;
+        margin-bottom: 5vw;
+        margin-left: 0.5rem;
+        /* justify-content: center; */
     }
 
     .category-box h1 {
         font-size: 1rem;
-        color: white;
     }
 
     .category-box h2 {
-        font-size: 0.75rem;
+        font-size: 0.6rem;
         margin-top: 1.5vw;
-        color: white;
     }
 
     .section-box {
@@ -1452,7 +1570,12 @@ footer img {
     .section-box p {
         font-size: 0.6rem;
         line-height: 1.5rem;
-        color: white;
+    }
+
+    .scroll-box p {
+        font-size: 0.6rem;
+        line-height: 1.5rem;
+        font-weight: 600;
     }
 
     .section-content {
@@ -1513,6 +1636,10 @@ footer img {
         font-size: 2rem;
     }
 
+    .section-row .video-cover p {
+        font-size: 2rem;
+    }
+
     .contact-box-inner {
         min-height: 60vw;
         padding: 4vw;
@@ -1531,22 +1658,23 @@ footer img {
     }
 
     .socials-container {
-        text-align: center;
-        place-content: center;
-        place-items: center;
-        margin-top: 5vw;
+        flex-direction: column;
+        margin-top: 10vw;
         border: none;
     }
 
     .socials-container p {
-        display: none;
+        /* display: none; */
+        text-align: left;
+        font-size: 2.5vw;
+        margin: 0;
     }
 
     .ContactSocialButtons {
         place-content: center;
         place-items: center;
-        margin: 0 auto;
-        margin-left: 45%;
+        margin-right: 1vw;
+        margin-left: 0;
         width: 10vw;
     }
 }
