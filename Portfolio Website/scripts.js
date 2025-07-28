@@ -7,6 +7,8 @@ let galleryArrowRightFull = document.getElementById("galleryArrowRightFull");
 let fullImage = document.getElementById("fullImage");
 let fullVideoHorz = document.getElementById("fullVideoHorz");
 let fullVideoVert = document.getElementById("fullVideoVert");
+let fullEmbededVideo = document.getElementById("fullEmbededVideo");
+let fullImageTrue = false;
 let contentBox = document.getElementById("contentBox");
 let html = document.getElementById("html");
 let body = document.getElementById("body");
@@ -17,6 +19,8 @@ let pic;
 let vid;
 let imageTitleNew;
 let imageDateNew;
+let video = document.getElementById("embededVideo");
+var videoAll = [];
 
 let headerImageBox = document.getElementById("headerImageBox");
 let headerImageCover = document.getElementById("headerImageCover");
@@ -157,6 +161,7 @@ function openFullImage(div) {
     fullImageBox.getElementsByTagName('img')[0].style.display = "flex";
     fullImageBox.getElementsByTagName('iframe')[0].style.display = "none";
     fullImageBox.getElementsByTagName('iframe')[1].style.display = "none";
+    fullImageBox.getElementsByTagName('video')[0].style.display = "none";
     currentImage = div;
     currentIndex = div.id;
     pic = div.parentElement.getElementsByClassName("image")[currentIndex];
@@ -165,32 +170,43 @@ function openFullImage(div) {
     fullImageWrap.style.transition = "all 1s";
     fullImage.src = pic.src;
     html.style.overflowY = "hidden";
+    fullImageTrue = true;
 }
 
 function closeFullImage() {
     fullImageBox.getElementsByTagName('img')[0].style.display = "none";
     fullImageBox.getElementsByTagName('iframe')[0].style.display = "none";
     fullImageBox.getElementsByTagName('iframe')[1].style.display = "none";
+    fullImageBox.getElementsByTagName('video')[0].style.display = "none";
     fullVideoHorz.src = 0;
     fullVideoVert.src = 0;
     fullImageWrap.style.display = "none";
     html.style.overflowY = "scroll";
+    fullImageTrue = false;
 }
 
 function openFullVideo(div) {
     if (div.classList.contains('horizontal')) {
         fullImageBox.getElementsByTagName('iframe')[0].style.display = "flex";
         fullVideoHorz.src = div.id;
-    } else {
+    } else if (div.classList.contains('vertical')) {
         fullImageBox.getElementsByTagName('iframe')[1].style.display = "flex";
         fullVideoVert.src = div.id;
+    } else {
+        fullImageBox.getElementsByTagName('video')[0].style.display = "flex";
+        fullEmbededVideo.src = div.src;
     }
     fullImageWrap.style.display = "flex";
     fullImageWrap.style.transition = "all 1s";
     html.style.overflowY = "hidden";
+    fullImageTrue = true;
 }
 
-
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && fullImageTrue) {
+        closeFullImage();
+    }
+});
 
 // SECTION FUNCTIONS
 function openAboutSection() {
@@ -282,6 +298,11 @@ function openDigitalSection() {
         digitalSectionButton.className = digitalSectionButton.className += " active";
         aboutSectionButton.className = aboutSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
         contactsSectionButton.className = contactsSectionButton.className.replace(/(?:^|\s)active(?!\S)/g, '');
+        videoAll = Array.from(document.getElementsByTagName('video'));
+        for (let i = 0; i < videoAll.length; i++) {
+            videoAll[i].load();
+            videoAll[i].autoplay = true;
+        }
     }
 }
 

@@ -17,15 +17,16 @@
 <body class="lexend-zetta-main" id="body">
 
 
-  <div class="full-image-wrap" id="fullImageWrap">
+  <div class="full-image-wrap" id="fullImageWrap" onclick="closeFullImage()">
     <div class="full-image-box" id="fullImageBox">
       <div class="full-image-container">
         <img id="fullImage" src="">
         <iframe class="fullVideoHorz" id="fullVideoHorz" src=""></iframe>
         <iframe class="fullVideoVert" id="fullVideoVert" src=""></iframe>
+        <video class="fullEmbededVideo" id="fullEmbededVideo" src="" controls></video>
       </div>
-      <div class="close-box">
-        <span class="close" onclick="closeFullImage()">Close</span>
+      <div class="close-box" onclick="closeFullImage()">
+        <span class="close">X</span>
       </div>
     </div>
   </div>
@@ -129,17 +130,13 @@
 
       <div class="section-background">
         <div class="category-box">
-          <h1>A MULTIMEDIA DESIGNER</h1>
-          <h2>Explore what I have to offer.</h2>
         </div>
 
-        <hr class="category-line">
+
 
         <div class="section-box">
           <div class="section-content">
             <div class="image-box digital-box">
-              <img class="horizontal" id="https://youtube.com/embed/UmzlwPlz628?si=v7GzybpyjglGlLwT horizontal"
-                src="Images/Header Images/Website Banners.jpg" alt="" onclick="openFullVideo(this)">
               <img class="image" id="0" src="Images/Digital/Posters/Land Rover Defender Poster-min.jpg" alt=""
                 onclick="openFullImage(this)">
               <img class="image" id="1" src="Images/Photography/Portrait/Portrait-4-min.jpg" alt=""
@@ -148,61 +145,56 @@
                 onclick="openFullImage(this)">
               <img class="image" id="3" src="Images/Digital/Product Advertising/Cologne-Bottle-2.jpg" alt=""
                 onclick="openFullImage(this)">
-              <img class="horizontal"
-                id="https://youtube.com/embed/lbRWK_94bns?si=sEtGuR774_zUv9kienablejsapi=1 horizontal"
-                src="Images/Header Images/Website Banners.jpg" alt="" onclick="openFullVideo(this)">
             </div>
           </div>
 
           <div class="scroll-box">
-            <p>I am Mehmet Sezer, a multimedia designer. <br> Cinematic photography, film production, graphic
+            <p>I am Mehmet Sezer, a multimedia designer. <br> <br>Cinematic photography, film production, graphic
               illustration,
               UI/UX and other deliverables are what I specialize in. I have experience in digital brand advertising and
-              marketing design, event and portrait photography, film and commercial production. I am here to turn your
-              visions into reality. Let me help you see through a different lens.</p>
+              marketing design, event and portrait photography, film and commercial production. <br> <br>I am here to
+              turn your
+              visions into reality. <br>Let me help you see through a different lens.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHILOSOPHY -->
+      <div class="section-background">
+        <div class="category-box">
+          <h1>PHILOSOPHY OF CREATION</h1>
+          <h2>An insight into my personal processes that I use for design.</h2>
+        </div>
+
+        <hr class="category-line">
+
+        <div class="section-box">
+          <div class="scroll-box">
+            <p>Real world happenings serve as an influence for every creative endeavor. Film, photo, paint, and other
+              forms of artistic media all embody a sense of realism, as nothing is truly created through the mind
+              alone.
+              Sensory inputs that one feels are articulated and combined to generate the masterpieces we see on a
+              daily
+              basis. No one can create a new color that doesn’t already exist. We simply blend the colors together to
+              create new noise.</p>
           </div>
         </div>
       </div>
 
 
       <!-- BIOGRAPHY -->
-      <div class="section-couple">
-        <div class="section-background">
-          <div class="category-box">
-            <h1>BIOGRAPHY</h1>
-            <h2>An insight into my personal processes that I use for design.</h2>
-          </div>
 
-          <hr class="category-line">
-
-          <div class="section-box">
-            <div class="scroll-box">
-              <p>Hi! I am Mehmet Sezer, a multimedia designer. Cinematic photography, film production, graphic
-                illustration,
-                UI/UX and other deliverables are what I specialize in.</p>
-            </div>
-          </div>
+      <div class="section-background">
+        <div class="category-box">
+          <h1>HISTORY</h1>
+          <h2>How did I get to this point?</h2>
         </div>
 
-        <!-- PHILOSOPHY -->
-        <div class="section-background">
-          <div class="category-box">
-            <h1>PHILOSOPHY OF CREATION</h1>
-            <h2>An insight into my personal processes that I use for design.</h2>
-          </div>
+        <hr class="category-line">
 
-          <hr class="category-line">
-
-          <div class="section-box">
-            <div class="scroll-box">
-              <p>Real world happenings serve as an influence for every creative endeavor. Film, photo, paint, and other
-                forms of artistic media all embody a sense of realism, as nothing is truly created through the mind
-                alone.
-                Sensory inputs that one feels are articulated and combined to generate the masterpieces we see on a
-                daily
-                basis. No one can create a new color that doesn’t already exist. We simply blend the colors together to
-                create new noise.</p>
-            </div>
+        <div class="section-box">
+          <div class="scroll-box">
+            <p>From making pencil drawings and comic books in elementary, to now designing advertisements, brand identities and producing short films, a long time has passed. My first intial jump into the world of design started with game development utilizing the Unreal Engine. I made small projects with simple mechanics, solely as a hobby.</p>
           </div>
         </div>
       </div>
@@ -566,10 +558,40 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- SCHNEIDER AD -->
+      <div class="section-background">
+        <div class="category-box">
+          <h1>SCHNEIDER ELECTRIC GOOGLE AD</h1>
+          <h2>Animated Advertising Design</h2>
+        </div>
+
+        <hr class="category-line">
+
+        <div class="section-box">
+          <div class="section-content">
+            <div class="image-box digital-box">
+              <video id="embededVideo" src="ASCO - Google Display Ad - Hospital.mp4" width="1200" loop
+                onclick="openFullVideo(this)"></video>
+              <video id="embededVideo" src="ASCO - Google Display Ad - Hospital Square.mp4" width="628" loop
+                onclick="openFullVideo(this)"></video>
+            </div>
+          </div>
+
+          <div class="scroll-box">
+            <p>I am Mehmet Sezer, a multimedia designer. <br> Cinematic photography, film production, graphic
+              illustration,
+              UI/UX and other deliverables are what I specialize in. I have experience in digital brand advertising and
+              marketing design, event and portrait photography, film and commercial production. I am here to turn your
+              visions into reality. Let me help you see through a different lens.</p>
+          </div>
+        </div>
+      </div>
 
 
 
-
+      <div class="section-couple">
         <!-- F-14 TOMCAT POSTER -->
         <div class="section-background">
           <div class="category-box">
@@ -640,38 +662,39 @@
             </div>
           </div>
         </div>
+      </div>
 
-
-        <!-- BOATHOUSE RENDER -->
-        <div class="section-background">
-          <div class="category-box">
-            <h1>LONESOME WATERS</h1>
-            <h2>CREATIVE 3D RENDER</h2>
-          </div>
-
-          <hr class="category-line">
-
-          <div class="section-box">
-            <div class="section-content">
-              <div class="image-box digital-box">
-                <img class="image" id="0" src="Images/Digital/3D Renders/Boathouse-2-min.jpg" alt=""
-                  onclick="openFullImage(this)">
-                <img class="image" id="1" src="Images/Digital/3D Renders/Boathouse-3-min.jpg" alt=""
-                  onclick="openFullImage(this)">
-                <img class="image" id="2" src="Images/Digital/3D Renders/Boathouse-1-min.jpg" alt=""
-                  onclick="openFullImage(this)">
-              </div>
-            </div>
-
-            <div class="scroll-box">
-              <p>A simple 3D render of a scene depicting a car parked in front of a boat house on the coast by the
-                ocean.
-                Made using Blender. None of the models were created by me, I only put them together into a composite.
-              </p>
-            </div>
-          </div>
+      <!-- BOATHOUSE RENDER -->
+      <div class="section-background">
+        <div class="category-box">
+          <h1>LONESOME WATERS</h1>
+          <h2>CREATIVE 3D RENDER</h2>
         </div>
 
+        <hr class="category-line">
+
+        <div class="section-box">
+          <div class="section-content">
+            <div class="image-box digital-box">
+              <img class="image" id="0" src="Images/Digital/3D Renders/Boathouse-2-min.jpg" alt=""
+                onclick="openFullImage(this)">
+              <img class="image" id="1" src="Images/Digital/3D Renders/Boathouse-3-min.jpg" alt=""
+                onclick="openFullImage(this)">
+              <img class="image" id="2" src="Images/Digital/3D Renders/Boathouse-1-min.jpg" alt=""
+                onclick="openFullImage(this)">
+            </div>
+          </div>
+
+          <div class="scroll-box">
+            <p>A simple 3D render of a scene depicting a car parked in front of a boat house on the coast by the
+              ocean.
+              Made using Blender. None of the models were created by me, I only put them together into a composite.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-couple">
         <!-- BIRD AND VULTURE VIDEO -->
         <div class="section-background">
           <div class="category-box">
