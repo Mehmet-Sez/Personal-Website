@@ -301,7 +301,7 @@ function openDigitalSection() {
         videoAll = Array.from(document.getElementsByTagName('video'));
         for (let i = 0; i < videoAll.length; i++) {
             videoAll[i].load();
-            videoAll[i].autoplay = true;
+            // videoAll[i].autoplay = true;
         }
     }
 }
