@@ -192,7 +192,7 @@ function openFullVideo(div) {
     } else if (div.classList.contains('vertical')) {
         fullImageBox.getElementsByTagName('iframe')[1].style.display = "flex";
         fullVideoVert.src = div.id;
-    } else {
+    } else if (div.classList.contains('embededVideo')) {
         fullImageBox.getElementsByTagName('video')[0].style.display = "flex";
         fullEmbededVideo.src = div.src;
     }

@@ -427,6 +427,7 @@ body {
 }
 
 .section-couple {
+    flex-direction: row;
     max-width: 100%;
     margin: 0 auto;
     display: flex;
@@ -686,6 +687,10 @@ body {
     outline-width: 0.125rem;
     text-align: left;
     opacity: 100%;
+}
+
+.contacts-section .section-background {
+    width: 100%;
 }
 
 .section-bar {

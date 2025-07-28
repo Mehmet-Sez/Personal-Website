@@ -619,9 +619,9 @@
         <div class="section-box">
           <div class="section-content">
             <div class="image-box digital-box">
-              <video id="embededVideo" src="ASCO - Google Display Ad - Hospital.mp4" width="1200" loop
+              <video class="embededVideo" id="embededVideo" src="ASCO - Google Display Ad - Hospital.mp4" width="1200" loop
                 onclick="openFullVideo(this)"></video>
-              <video id="embededVideo" src="ASCO - Google Display Ad - Hospital Square.mp4" width="628" loop
+              <video class="embededVideo" id="embededVideo" src="ASCO - Google Display Ad - Hospital Square.mp4" width="628" loop
                 onclick="openFullVideo(this)"></video>
             </div>
           </div>
@@ -784,7 +784,8 @@
               that were taken into Photoshop and After Effects where the birds were seperated from their backgrounds and
               motion was added to the images. It's an interesting take on photography where it blurs the line between
               photo and video, which is why it's labeled as animated photography. Finally audio elements were added to
-              immerse the viewer into an outdoor atmosphere.</p>
+              immerse the viewer into an outdoor atmosphere.
+            </p>
           </div>
         </div>
       </div>
@@ -804,77 +805,84 @@
 
       <h1 class="section-title">CONTACTS</h1>
 
-      <div class="section-background">
-        <div class="category-box">
-        </div>
+      <div class="section-couple">
+        <div class="section-background">
+          <div class="category-box">
+          </div>
+          <div class="section-box">
+            <div class="section-content">
+              <h1>SEND A CUSTOM MESSAGE</h1>
 
+              <hr class="category-line">
 
-        <div class="section-box">
-          <div class="section-content">
-            <h1>SEND A CUSTOM MESSAGE</h1>
-
-            <hr class="category-line">
-
-            <div class="contact-box">
-              <div class="contact-box-inner" id="contactInnerBox">
-                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="form">
-                  <input type="hidden" name="access_key" value="dec6d72b-5d4d-4633-92e8-4f1d53b7a202">
-                  <input type="hidden" name="subject" value="NEW MESSAGE FROM PORTFOLIO WEBSITE">
-                  <h1>First Name</h1>
-                  <input type="text" name="name" placeholder="" class="contact-input" required>
-                  <h1>Last Name</h1>
-                  <input type="text" name="name" placeholder="" class="contact-input" required>
-                  <h1>Email</h1>
-                  <input type="email" name="email" placeholder="" class="contact-input" required>
-                  <h1>Message</h1>
-                  <textarea name="message" placeholder="" class="contact-input" required></textarea>
-                  <button type="submit">Send</button>
-                  <input type="hidden" name="redirect" value="https://mehmetsdesign.com/">
-                </form>
-                <div class="submit-message" id="result">
-                  <p></p>
+              <div class="contact-box">
+                <div class="contact-box-inner" id="contactInnerBox">
+                  <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="form">
+                    <input type="hidden" name="access_key" value="dec6d72b-5d4d-4633-92e8-4f1d53b7a202">
+                    <input type="hidden" name="subject" value="NEW MESSAGE FROM PORTFOLIO WEBSITE">
+                    <h1>First Name</h1>
+                    <input type="text" name="name" placeholder="" class="contact-input" required>
+                    <h1>Last Name</h1>
+                    <input type="text" name="name" placeholder="" class="contact-input" required>
+                    <h1>Email</h1>
+                    <input type="email" name="email" placeholder="" class="contact-input" required>
+                    <h1>Message</h1>
+                    <textarea name="message" placeholder="" class="contact-input" required></textarea>
+                    <button type="submit">Send</button>
+                    <input type="hidden" name="redirect" value="https://mehmetsdesign.com/">
+                  </form>
+                  <div class="submit-message" id="result">
+                    <p></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="buffer-box">
+        <!-- <div class="buffer-box">
+          </div> -->
+
+        <div class="section-background">
+          <div class="category-box">
           </div>
+          <div class="section-box">
+            <div class="section-content contact-social">
+              <h1>SAY HI THROUGH MY SOCIALS</h1>
 
-          <div class="section-content contact-social">
-            <h1>SAY HI THROUGH MY SOCIALS</h1>
+              <hr class="category-line">
 
-            <hr class="category-line">
-
-            <div class="contact-box">
-              <div class="contact-box-inner">
-                <div class="socials-container" onclick="window.open('https://www.instagram.com/_mehmetsez_/','_blank')">
-                  <button type="button" class="ContactSocialButtons"> <img src="./icons8-instagram-192.png" alt="">
-                  </button>
-                  <p>Follow me on Instagram</p>
-                </div>
-                <div class="socials-container" onclick="window.open('https://www.youtube.com/@Mehmet_Sez','_blank')">
-                  <button type="button" class="ContactSocialButtons"> <img src="./icons8-youtube-150 (1).png" alt="">
-                  </button>
-                  <p>Subscribe to my YouTube</p>
-                </div>
-                <div class="socials-container"
-                  onclick="window.open('https://www.linkedin.com/in/mehmetsdesigns/','_blank')">
-                  <button type="button" class="ContactSocialButtons"> <img src="./icons8-linkedin-384.png" alt="">
-                  </button>
-                  <p>Connect with me on LinkedIn</p>
-                </div>
-                <div class="socials-container" onclick="window.open('https://mehmetdigitaldesign.etsy.com','_blank')">
-                  <button type="button" class="ContactSocialButtons"> <img src="./icons8-etsy-128.png" alt="">
-                  </button>
-                  <p>Check out my Etsy shop</p>
-                </div>
-                <div class="socials-container"
-                  onclick="window.open('https://www.upwork.com/freelancers/~0199af459c6d1d1c3c?mp_source=share','_blank')">
-                  <button type="button" class="ContactSocialButtons">
-                    <img src="./icons8-upwork-150.png" alt="">
-                  </button>
-                  <p>Hire me through UpWork</p>
+              <div class="contact-box">
+                <div class="contact-box-inner">
+                  <div class="socials-container"
+                    onclick="window.open('https://www.instagram.com/_mehmetsez_/','_blank')">
+                    <button type="button" class="ContactSocialButtons"> <img src="./icons8-instagram-192.png" alt="">
+                    </button>
+                    <p>Follow me on Instagram</p>
+                  </div>
+                  <div class="socials-container" onclick="window.open('https://www.youtube.com/@Mehmet_Sez','_blank')">
+                    <button type="button" class="ContactSocialButtons"> <img src="./icons8-youtube-150 (1).png" alt="">
+                    </button>
+                    <p>Subscribe to my YouTube</p>
+                  </div>
+                  <div class="socials-container"
+                    onclick="window.open('https://www.linkedin.com/in/mehmetsdesigns/','_blank')">
+                    <button type="button" class="ContactSocialButtons"> <img src="./icons8-linkedin-384.png" alt="">
+                    </button>
+                    <p>Connect with me on LinkedIn</p>
+                  </div>
+                  <div class="socials-container" onclick="window.open('https://mehmetdigitaldesign.etsy.com','_blank')">
+                    <button type="button" class="ContactSocialButtons"> <img src="./icons8-etsy-128.png" alt="">
+                    </button>
+                    <p>Check out my Etsy shop</p>
+                  </div>
+                  <div class="socials-container"
+                    onclick="window.open('https://www.upwork.com/freelancers/~0199af459c6d1d1c3c?mp_source=share','_blank')">
+                    <button type="button" class="ContactSocialButtons">
+                      <img src="./icons8-upwork-150.png" alt="">
+                    </button>
+                    <p>Hire me through UpWork</p>
+                  </div>
                 </div>
               </div>
             </div>
