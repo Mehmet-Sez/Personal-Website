@@ -1164,7 +1164,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 90%;
+    width: 100%;
     margin: 1vw auto;
     padding: 0;
     place-content: center;
