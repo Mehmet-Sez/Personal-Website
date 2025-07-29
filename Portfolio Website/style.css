@@ -870,12 +870,8 @@ body {
 
 .section-button:hover {
     cursor: pointer;
-    scale: 0.9;
-}
-
-.section-button.active {
     color: goldenrod;
-    font-weight: 500;
+    scale: 0.9;
 }
 
 .header-image-box {
@@ -1330,10 +1326,10 @@ body {
 }
 
 .socials-container p {
-    margin: 0;
+    margin: 0 auto;
     margin-left: 1vw;
     color: white;
-    text-align: right;
+    text-align: left;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1350,8 +1346,8 @@ body {
 }
 
 .ContactSocialButtons {
-    margin: 0;
-    margin-left: 10vw;
+    margin: 0 auto;
+    margin-left: 1vw;
     background-color: rgba(164, 21, 21, 0);
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1677,7 +1673,7 @@ footer img {
 
     .ContactSocialButtons {
         margin: 0;
-        margin-left: clamp(5rem, 2vw, 25rem);
+        margin-left: clamp(5rem, 16vw, 25rem);
         width: 7vw;
     }
 
